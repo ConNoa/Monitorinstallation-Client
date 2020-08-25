@@ -1,0 +1,69 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\TempTarget-PostProccess.v4p" systemname="TempTarget-PostProccess" filename="D:\_IR\_Template_2016\APP\Subpatches\TempTarget-PostProccess.v4p" scrollx="0" scrolly="-360">
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="2550" top="420" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2550" top="420" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Buffers">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="2" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="2550" top="4125" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2550" top="4125" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="17820" top="7740" width="8070" height="5895">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <LINK srcnodeid="1" srcpinname="Output Node" dstnodeid="2" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="3">
+   <BOUNDS type="Node" left="2700" top="1605" width="2700" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2700" top="1605" width="2700" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|add global post process effects here|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="UnsharpMask (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\UnsharpMask.tfx" nodename="UnsharpMask (DX11.TextureFX)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="2700" top="1995" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2700" top="1995">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="FXAA11 (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\FXAA11.tfx" nodename="FXAA11 (DX11.TextureFX)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="2700" top="2520" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2700" top="2520">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Levels (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Levels.tfx" nodename="Levels (DX11.TextureFX)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="4320" top="1995" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4320" top="1995">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Glow (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Glow.tfx" nodename="Glow (DX11.TextureFX)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="4320" top="2520" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4320" top="2520">
+   </BOUNDS>
+   </NODE>
+   </PATCH>

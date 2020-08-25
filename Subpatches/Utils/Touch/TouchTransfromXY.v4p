@@ -1,0 +1,127 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\Utils\TouchModule\TouchTransfromXY.v4p" systemname="TouchTransfromXY" filename="G:\Ascreen\Artek Museum\APPS\Tablet-APP\APP\Subpatches\Utils\TouchModule\TouchTransfromXY.v4p">
+   <NODE systemname="TouchState (System Split)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Split)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1500" top="1845" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Touch Data" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Id" visible="1">
+   </PIN>
+   <PIN pinname="Is New" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="1845">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="ApplyTransform (Transform Vector)" nodename="ApplyTransform (Transform Vector)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1920" top="2850" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ Transformed" visible="1">
+   </PIN>
+   <PIN pinname="XYZ UnTransformed" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="xy (2d)" nodename="xy (2d)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1905" top="3300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="TouchState (System Join)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Join)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1500" top="3765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Id" visible="1">
+   </PIN>
+   <PIN pinname="Is New" visible="1">
+   </PIN>
+   <PIN pinname="Touch Data" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="3765">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="3000" top="2400" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="2475" top="1200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Transfrom-TempTarget">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="2460" top="1890" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Inverse (Transform)" nodename="Inverse (Transform)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="1920" top="2445" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="8" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Touch Data|">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output Node" dstnodeid="0" dstpinname="Touch Data">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Id" dstnodeid="3" dstpinname="Id">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="XY" dstnodeid="3" dstpinname="PositionXY">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Is New" dstnodeid="3" dstpinname="Is New">
+   </LINK>
+   <NODE id="9" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Touch Data|">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="4365" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="4365" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Touch Data" dstnodeid="9" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="XYZ Transformed" dstnodeid="2" dstpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="XYZ" dstnodeid="1" dstpinname="XYZ UnTransformed">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Transform Out" dstnodeid="7" dstpinname="Source" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Input Value" dstnodeid="6" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="PositionXY" dstnodeid="4" dstpinname="XY">
+   </LINK>
+   <BOUNDS type="Window" left="16620" top="8955" width="7635" height="5355">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   </PATCH>

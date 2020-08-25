@@ -1,0 +1,339 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\Logic-Presets.v4p" systemname="Logic-Temp-Presets" filename="D:\_IR\_Template_2016\APP\Subpatches\Presets\Logic-Temp-Presets.v4p" scrollx="15" scrolly="-360">
+   <NODE id="0" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1665" top="1965" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1665" top="1965" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="Presets">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="1" systemname="S (Value)" nodename="S (Value)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2445" top="3030" width="1065" height="270">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="State-P">
+   </PIN>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" visible="1" values="State-Presets">
+   </PIN>
+   </NODE>
+   <NODE id="2" systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="1500" top="2520" width="600" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="Animation">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="Idle">
+   </PIN>
+   <PIN pinname="Filter" visible="1">
+   </PIN>
+   <PIN pinname="Comparison" slicecount="1" values="ContainsAny">
+   </PIN>
+   <PIN pinname="Hits" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="3" systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden">
+   <BOUNDS type="Node" left="990" top="3240" width="645" height="270">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="4" systemname="S (Value)" nodename="S (Value)" componentmode="Hidden">
+   <BOUNDS type="Node" left="1005" top="3810" width="1740" height="270">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="Transition-Presets">
+   </PIN>
+   </NODE>
+   <NODE id="5" systemname="S (Value)" nodename="S (Value)" componentmode="Hidden">
+   <BOUNDS type="Node" left="3915" top="3045" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="6" systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="3915" top="2295" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="Idle">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="7" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="4110" top="1815" width="1200" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4110" top="1815" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="Reset-Presets">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output String" dstnodeid="2" dstpinname="Filter">
+   </LINK>
+   <NODE id="9" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Enable Back|">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="4430" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="4430" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Hits" dstnodeid="9" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Hits" dstnodeid="3" dstpinname="Go To Position">
+   </LINK>
+   <NODE id="10" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="State">
+   </PIN>
+   <BOUNDS type="Box" left="1515" top="500" width="2205" height="375">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1515" top="500" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Position Out" dstnodeid="4" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Hits" dstnodeid="1" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="5" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="5" dstpinname="Send String" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="6" dstpinname="Input 2">
+   </LINK>
+   <BOUNDS type="Window" left="7470" top="3690" width="16245" height="12990">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <LINK srcnodeid="10" srcpinname="Output String" dstnodeid="2" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output String" dstnodeid="6" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="11205" top="675" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Buttons-Menu">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="MultiFlipFlop (Animation Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.AnimAdvanced.dll" nodename="MultiFlipFlop (Animation Advanced)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="11205" top="2235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="3" values="0,0,0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="11205" top="2235">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="11205" top="3105" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="Presets-Main-Index">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE id="20" systemname="S (Value)" nodename="S (Value)" componentmode="Hidden">
+   <BOUNDS type="Node" left="6375" top="2985" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="19" systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="6375" top="2235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="Idle">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="18" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6570" top="1755" width="1200" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6570" top="1755" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="Set-Presets">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="20" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output String" dstnodeid="20" dstpinname="Send String" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output String" dstnodeid="19" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output String" dstnodeid="19" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="14" dstpinname="Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="41" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10590" top="6090" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10590" top="6090" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Presets">
+   </PIN>
+   </NODE>
+   <NODE systemname="Logic-Presets-1pix" filename="Logic-Presets-1pix.v4p" nodename="Logic-Presets-1pix.v4p" componentmode="Hidden" id="39">
+   <BOUNDS type="Node" left="3405" top="5700" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3405" top="5700" width="5415" height="6750">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10185" top="10830" width="7980" height="6750">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Hits" dstnodeid="39" dstpinname="StateEnabled">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="39" dstpinname="Index">
+   </LINK>
+   <NODE systemname="Logic-Presets-BinSizes" filename="Logic-Presets-BinSizes.v4p" nodename="Logic-Presets-BinSizes.v4p" componentmode="Hidden" id="40">
+   <BOUNDS type="Node" left="10590" top="5700" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10590" top="5700" width="5415" height="6690">
+   </BOUNDS>
+   <BOUNDS type="Window" left="2220" top="720" width="22515" height="14865">
+   </BOUNDS>
+   <PIN pinname="Presets" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Hits" dstnodeid="40" dstpinname="StateEnabled">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="40" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="40" srcpinname="Presets" dstnodeid="41" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Logic-Presets-Keyboard" filename="Logic-Presets-Keyboard.v4p" nodename="Logic-Presets-Keyboard.v4p" componentmode="Hidden" id="65">
+   <BOUNDS type="Node" left="5490" top="7620" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5490" top="7620" width="5415" height="7750">
+   </BOUNDS>
+   <BOUNDS type="Window" left="17685" top="14295" width="5415" height="7740">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Hits" dstnodeid="65" dstpinname="StateEnabled">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="65" dstpinname="Index">
+   </LINK>
+   <NODE systemname="Logic-Presets-Sliders" filename="Logic-Presets-Sliders.v4p" nodename="Logic-Presets-Sliders.v4p" componentmode="Hidden" id="53">
+   <BOUNDS type="Node" left="8265" top="7620" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8265" top="7620" width="5530" height="6690">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16170" top="5940" width="6795" height="10545">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="53" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Hits" dstnodeid="53" dstpinname="StateEnabled">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Input Value" dstnodeid="15" dstpinname="Set">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="66">
+   <BOUNDS type="Node" left="3405" top="7620" width="990" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3405" top="7620" width="1650" height="345">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="Logic-Video">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="67">
+   <BOUNDS type="Node" left="10590" top="7620" width="990" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10590" top="7620" width="1710" height="345">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="Logic-3D">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Logic-Presets-Touchbutton" filename="Logic-Presets-Touchbutton.v4p" nodename="Logic-Presets-Touchbutton.v4p" componentmode="Hidden" id="79">
+   <BOUNDS type="Node" left="5490" top="5700" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5490" top="5700" width="5415" height="7750">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14610" top="8265" width="8730" height="7740">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Hits" dstnodeid="79" dstpinname="StateEnabled">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="79" dstpinname="Index">
+   </LINK>
+   <NODE systemname="Logic-Presets-Logic" filename="Logic-Presets-Logic.v4p" nodename="Logic-Presets-Logic.v4p" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="8265" top="5700" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8265" top="5700" width="5800" height="7675">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16815" top="9825" width="10665" height="7665">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Hits" dstnodeid="91" dstpinname="StateEnabled">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="91" dstpinname="Index">
+   </LINK>
+   </PATCH>

@@ -1,0 +1,267 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\Logic-Actions.v4p" systemname="Logic-Actions" filename="D:\_IR\_Template_2016\APP\Subpatches\Logic-Actions.v4p">
+   <NODE systemname="FrameDelay (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (String)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1650" top="5130" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="Idle">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1650" top="5130">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="2490" top="2445" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="TouchData">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="2475" top="3240" width="825" height="270">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   <PIN pinname="Down Edge" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="1500" top="3180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   <PIN pinname="Down Edge" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AvoidNIL (String)" filename="%VVVV%\lib\nodes\modules\String\AvoidNIL (String).v4p" nodename="AvoidNIL (String)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="1665" top="4650" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="Idle">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="Reset">
+   </PIN>
+   <BOUNDS type="Box" left="1665" top="4650">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1500" top="1155" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="1155" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Automata (Animation)" nodename="Automata (Animation)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="1680" top="4140" width="1140" height="270">
+   </BOUNDS>
+   <PIN pinname="Current state" visible="1">
+   </PIN>
+   <PIN pinname="Error messages" visible="1">
+   </PIN>
+   <PIN pinname="Quadrupels (from, event, to, action)" slicecount="1" values="|Reset 0.1 Idle DoIdle&cr;&lf;Idle Reset Reset DoReset &cr;&lf;Idle OnMove Move DoMove&cr;&lf;Idle OnTouch Touch DoTouch&cr;&lf;Move Reset Reset DoReset &cr;&lf;Move OnStop Idle DoIdle&cr;&lf;Touch Reset Reset DoReset &cr;&lf;Touch OnRelease Idle DoIdle&cr;&lf;Touch OnMove Move DoMove&cr;&lf;|">
+   </PIN>
+   <PIN pinname="OnTouch" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="OnRelease" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="OnMove" visible="1">
+   </PIN>
+   <PIN pinname="OnStop" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="ACTIONS">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <NODE id="12" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="State-A">
+   </PIN>
+   <BOUNDS type="Box" left="1650" top="6390" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1650" top="6390" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="Idle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Up Edge" dstnodeid="11" dstpinname="OnMove" linkstyle="Bezier">
+   <LINKPOINT x="1560" y="3788">
+   </LINKPOINT>
+   <LINKPOINT x="2070" y="3788">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Up Edge" dstnodeid="11" dstpinname="OnTouch" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Down Edge" dstnodeid="11" dstpinname="OnStop" linkstyle="Bezier">
+   <LINKPOINT x="2220" y="3788">
+   </LINKPOINT>
+   <LINKPOINT x="2850" y="3788">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Down Edge" dstnodeid="11" dstpinname="OnRelease" linkstyle="PolyLine">
+   </LINK>
+   <BOUNDS type="Window" left="12555" top="7395" width="9240" height="8250">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="1020" top="3600" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Reset">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Input Value" dstnodeid="11" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Current state" dstnodeid="8" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="0" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output 1" dstnodeid="12" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="4290" top="5700" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="Idle">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="Touch">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output 1" dstnodeid="15" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4290" top="6390" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4290" top="6390" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Touch">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="16" dstpinname="Y Input Value" linkstyle="PolyLine">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="5880" top="5685" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="Idle">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="Move">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5880" top="6375" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5880" top="6375" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Move">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="17" dstpinname="Y Input Value" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output 1" dstnodeid="19" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="1920" top="5625" width="1050" height="270">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="Idle">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="State-A">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output 1" dstnodeid="20" dstpinname="Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="22">
+   <BOUNDS type="Node" left="6465" top="5760" width="5115" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6465" top="5760" width="2190" height="1260">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|placeholder for any action different of mouse / touch inputs &cr;&lf;e.g. kinect, encoders, buttons, etc.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="23">
+   <BOUNDS type="Node" left="4065" top="4080" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4065" top="4080" width="3270" height="300">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="..\Assets\Logic\Actions.fsm">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="7">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="24">
+   <BOUNDS type="Node" left="1530" top="180" width="5115" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1530" top="180" width="2670" height="870">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|placeholder for any action different of mouse / touch inputs &cr;&lf;e.g. kinect, encoders, buttons, etc.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Count (Node)" nodename="Count (Node)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="2490" top="2805" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Input Value" dstnodeid="4" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Count" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   </PATCH>

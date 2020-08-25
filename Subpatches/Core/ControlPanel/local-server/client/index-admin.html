@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<!-- Application Name - app.js and Main controller - controller.js-->
+<html ng-app="configApp" ng-init="admin=true">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Page title - directive.js -->
+    <title page-title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Sliders-->
+    <link rel="stylesheet" href="js/plugins/bootstrap-slider/css/slider.css">
+    <!-- Fonts  -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <!--  CSS Animations -->
+    <link href="css/animate.css" rel="stylesheet">
+     <!-- Switchery -->
+    <link rel="stylesheet" href="js/plugins/switchery/switchery.min.css">
+    <!--  CSS Main -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/vnm.css" rel="stylesheet">
+    <link rel="stylesheet" href="js/plugins/colorpicker/colorpicker.css">
+    <!-- Feature detection -->
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<!-- Current state name -->
+
+<body class="{{$state.current.name}}">
+    <!-- Page Wrapper-->
+    <section id="main-wrapper" class="theme-default">
+        <!-- Page wrapper -->
+        <header id="header" ng-include="'views/header.html'"></header>
+        <!-- Left Sidebar Navigation -->
+        <aside class="sidebar sidebar-left" ng-include="'views/left-sidebar.html'"></aside>
+        <!-- Content wraper -->
+        <section class="main-content-wrapper">
+            <!-- Main content view  -->
+            <div ui-view></div>
+        </section>
+        <!-- /Content wraper-->
+    </section>
+    <!-- jQuery -->
+    <script src="js/vendor/jquery-2.1.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/navgoco/jquery.navgoco.min.js"></script>
+    <!-- chartJS  -->
+    <script src="js/plugins/chartjs/Chart.min.js"></script>
+    <!-- Angular -->
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/lib/angular/angular-ui-router.js"></script>
+    <script src="js/bootstrap/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <script src="js/lib/angular/angular-animate.min.js"></script>
+    <!-- uievents -->
+    <script src="js/plugins/ui-events/event.js"></script>
+    <!-- Growl -->
+    <script src="js/plugins/growl/angular-growl-notifications.min.js"></script>
+    <!-- Pace JS -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- Bootstrap sliders -->
+    <script src="js/plugins/bootstrap-slider/js/bootstrap-slider.js"></script>
+    <!-- chartJS  -->
+    <script src="js/plugins/chartjs/tc-angular-chartjs.min.js"></script>
+    <!-- Gauge -->
+    <script src="js/plugins/gauge/gauge.min.js"></script>
+    <!-- UI Tree -->
+    <script src="js/plugins/ui-tree/angular-ui-tree.min.js"></script>
+    <!-- switchery -->
+    <script src="js/plugins/switchery/switchery.min.js"></script>
+    <script src="js/plugins/switchery/ui-switchery.js"></script>
+
+    <script src="js/plugins/colorpicker/bootstrap-colorpicker-module.js"></script>
+
+    <!-- Angular Script -->
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/custom.js"></script>
+	<script src="js/filters.js"></script>
+
+</body>
+
+</html>

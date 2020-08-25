@@ -1,0 +1,44 @@
+Texture2D tex0: PREVIOUS;
+Texture2D tex1 <string uiname="Control";>;
+
+float2 R:TARGETSIZE;
+
+cbuffer controls:register(b0){
+	float Width <float uimin=0.0;float uimax=1.0;> =0.5;
+};
+
+SamplerState s0 <bool visible=true;string uiname="Sampler";> {Filter=MIN_MAG_MIP_LINEAR;AddressU=CLAMP;AddressV=CLAMP;};
+
+float4 pBLUR(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
+	float lod=log2(max(R.x,R.y));
+	float4 map=tex1.SampleLevel(s0,x,0);map=max(map.x,max(map.y,map.z))*map.a;
+	lod=map.x*(Width)*log2(max(R.x,R.y));
+	float4 c=0;
+	float2 off=.5/R*pow(2,lod)*saturate(lod);
+	c+=tex0.SampleLevel(s0,x+float2(0,0)*off,lod);
+	c+=tex0.SampleLevel(s0,x+float2(1,1)*off,lod);
+	c+=tex0.SampleLevel(s0,x+float2(1,-1)*off,lod);
+	c+=tex0.SampleLevel(s0,x+float2(-1,-1)*off,lod);
+	c+=tex0.SampleLevel(s0,x+float2(-1,1)*off,lod);
+	off*=1.86;
+	c+=tex0.SampleLevel(s0,x+float2(0,1)*off,lod);
+	c+=tex0.SampleLevel(s0,x+float2(0,-1)*off,lod);
+	c+=tex0.SampleLevel(s0,x+float2(-1,0)*off,lod);
+	c+=tex0.SampleLevel(s0,x+float2(1,0)*off,lod);
+	c/=9;
+	c.rgb/=c.a+.000001;
+	float4 c0=tex0.SampleLevel(s0,x,0);
+	c.rgb=lerp(c.rgb,c0.rgb,smoothstep(.75,1,c0.a));
+	c.a=c0.a;
+	return c;
+}
+
+float4 pMIPS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
+	float4 c=tex0.SampleLevel(s0,x,0);
+	c.rgb*=c.a;
+	return c;
+}
+technique10 FastBlur{
+	pass P0 <bool mips=true;>{SetPixelShader(CompileShader(ps_4_0,pMIPS()));}
+	pass P1 <bool mips=true;>{SetPixelShader(CompileShader(ps_4_0,pBLUR()));}
+}

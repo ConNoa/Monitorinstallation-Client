@@ -1,0 +1,169 @@
+<?xml version='1.0'?>
+<!DOCTYPE qfsmproject SYSTEM 'qfsm.dtd'>
+<qfsmproject version="0.53" author="Qfsm">
+  <machine nummooreout="0" transfontitalic="0" draw_it="1" statefontsize="8" transfont="Helvetica" statefontitalic="0" author="" description="" version="" name="Karat" arrowtype="1" numbits="4" statefontweight="50" statefont="Helvetica" numin="0" transfontsize="8" transfontweight="50" type="2" numout="0" initialstate="0">
+    <outputnames_moore></outputnames_moore>
+    <inputnames></inputnames>
+    <outputnames></outputnames>
+    <itransition ypos="449" endx="97" xpos="63" endy="449"/>
+    <state pencolor="11141120" radius="45" description="" finalstate="0" moore_outputs="" ypos="449" code="0" xpos="142" linewidth="1">Reset</state>
+    <state pencolor="0" radius="60" description="" finalstate="0" moore_outputs="" ypos="452" code="1" xpos="325" linewidth="2">Idle</state>
+    <state pencolor="0" radius="60" description="" finalstate="0" moore_outputs="" ypos="445" code="2" xpos="651" linewidth="2">Menu</state>
+    <state pencolor="0" radius="60" description="" finalstate="0" moore_outputs="" ypos="111" code="5" xpos="485" linewidth="2">Presets</state>
+    <state pencolor="11141120" radius="50" description="" finalstate="0" moore_outputs="" ypos="262" code="14" xpos="655" linewidth="1">Reset-Presets</state>
+    <state pencolor="0" radius="60" description="" finalstate="0" moore_outputs="" ypos="612" code="3" xpos="829" linewidth="2">Video-Idle</state>
+    <state pencolor="11141120" radius="45" description="" finalstate="0" moore_outputs="" ypos="448" code="4" xpos="830" linewidth="1">Reset-Video</state>
+    <state pencolor="0" radius="60" description="" finalstate="0" moore_outputs="" ypos="286" code="6" xpos="217" linewidth="1">Update</state>
+    <state pencolor="11141120" radius="45" description="" finalstate="0" moore_outputs="" ypos="453" code="7" xpos="489" linewidth="1">Reset-Menu</state>
+    <state pencolor="11141120" radius="48" description="" finalstate="0" moore_outputs="" ypos="113" code="8" xpos="658" linewidth="1">Set-Presets</state>
+    <state pencolor="11141120" radius="35" description="" finalstate="0" moore_outputs="" ypos="809" code="9" xpos="988" linewidth="1">Set-Video-Play</state>
+    <state pencolor="0" radius="60" description="" finalstate="0" moore_outputs="" ypos="815" code="10" xpos="829" linewidth="2">Video-Play</state>
+    <state pencolor="11141120" radius="45" description="" finalstate="0" moore_outputs="" ypos="638" code="12" xpos="643" linewidth="1">Reset-3D</state>
+    <state pencolor="0" radius="60" description="" finalstate="0" moore_outputs="" ypos="798" code="13" xpos="639" linewidth="2">3D</state>
+    <state pencolor="11141120" radius="42" description="" finalstate="0" moore_outputs="" ypos="627" code="11" xpos="989" linewidth="1">Reset-Video-Play</state>
+    <transition c1x="212.9994685515372" c2y="451.0892841325939" c1y="450.1785682651877" description="" straight="1" type="2" ypos="449.2678523977816" endx="265" xpos="186.9992028273058" endy="452" c2x="238.9997342757686">
+      <from>0</from>
+      <to>1</to>
+      <inputs default="0" any="0" invert="0">0</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="185.5549220985776" c2y="369.5855056137407" c1y="394.211312002573" description="" straight="1" type="2" ypos="418.8371183914054" endx="205.8755284481305" xpos="175.3946189238012" endy="344.9596992249083" c2x="195.7152252733541">
+      <from>0</from>
+      <to>6</to>
+      <inputs default="0" any="0" invert="0">Update</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="404.6188326868716" c2y="455.9918547918167" c1y="455.9226346174513" description="" straight="1" type="2" ypos="455.8534144430859" endx="444.1042338293307" xpos="384.876132115642" endy="456.061074966182" c2x="424.3615332581011">
+      <from>1</from>
+      <to>7</to>
+      <inputs default="0" any="0" invert="0">Touch</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="286.2712978336326" c2y="352.8032303553673" c1y="374.9322942719451" description="" straight="1" type="2" ypos="397.061358188523" endx="257.0527009451216" xpos="300.8805962778881" endy="330.6741664387894" c2x="271.6619993893771">
+      <from>1</from>
+      <to>6</to>
+      <inputs default="0" any="0" invert="0">Update</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="461.8942495453994" c2y="622.8033229149208" c1y="612.5208745086416" description="" straight="0" type="2" ypos="482.9942674154357" endx="171.7729736689081" xpos="604.5625620478007" endy="482.7427034914291" c2x="276.0091779064901">
+      <from>2</from>
+      <to>0</to>
+      <inputs default="0" any="0" invert="0">Back</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="652.2959107202815" c2y="336.293752413284" c1y="360.6531216527386" description="" straight="1" type="2" ypos="385.0124908921932" endx="652.4392624013422" xpos="652.2242348797512" endy="311.9343831738294" c2x="652.3675865608118">
+      <from>2</from>
+      <to>14</to>
+      <inputs default="0" any="0" invert="0">Presets</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="735.5340512995709" c2y="448.6272401890982" c1y="449.2544803781963" description="" straight="1" type="2" ypos="449.8817205672945" endx="785" xpos="710.8010769493565" endy="448" c2x="760.2670256497855">
+      <from>2</from>
+      <to>4</to>
+      <inputs default="0" any="0" invert="0">Video</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="647.6881636855786" c2y="563.686613494913" c1y="534.3268112992894" description="" straight="1" type="2" ypos="504.9670091036658" endx="645.0433447413393" xpos="649.0105731576983" endy="593.0464156905365" c2x="646.365754213459">
+      <from>2</from>
+      <to>12</to>
+      <inputs default="0" any="0" invert="0">3D</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="557.3481909002877" c2y="67.43262442393933" c1y="64.25480338183435" description="" straight="1" type="2" ypos="61.07698233972938" endx="635.480549153836" xpos="518.2820117735138" endy="70.6104454660443" c2x="596.4143700270621">
+      <from>5</from>
+      <to>8</to>
+      <inputs default="0" any="0" invert="0">Presets</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="474.3840847168498" c2y="321.4858189470575" c1y="310.3326394217335" description="" straight="0" type="2" ypos="170.8922907279467" endx="608.5735931288072" xpos="481.4064625563232" endy="402.5735931288072" c2x="522.2019059932323">
+      <from>5</from>
+      <to>2</to>
+      <inputs default="0" any="0" invert="0">Back</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="656.000001277193" c2y="178" c1y="195" description="" straight="1" type="2" ypos="212" endx="658.0000012" xpos="655.0000013157895" endy="161" c2x="657.0000012385966">
+      <from>14</from>
+      <to>8</to>
+      <inputs default="0" any="0" invert="0">0</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="748.3954299421453" c2y="519.9005387378161" c1y="551.6617749126855" description="" straight="1" type="2" ypos="583.4230110875549" endx="692.7013258108485" xpos="776.2424820077936" endy="488.1393025629467" c2x="720.5483778764968">
+      <from>3</from>
+      <to>2</to>
+      <inputs default="0" any="0" invert="0">Back</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="906.9467611604174" c2y="626.5285281620807" c1y="627.10672835289" description="" straight="1" type="2" ypos="627.6849285436991" endx="947.0131188508589" xpos="886.9135823151967" endy="625.9503279712715" c2x="926.9799400056381">
+      <from>3</from>
+      <to>11</to>
+      <inputs default="0" any="0" invert="0">Video</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="827.7228576284623" c2y="532.2955266420393" c1y="512.5814892448052" description="" straight="1" type="2" ypos="492.8674518475712" endx="830.071257785013" xpos="826.5486575501869" endy="552.0095640392733" c2x="828.8970577067377">
+      <from>4</from>
+      <to>3</to>
+      <inputs default="0" any="0" invert="0">0</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="151.741923270737" c2y="376.1330253862904" c1y="345.4914910293508" description="" straight="1" type="2" ypos="314.8499566724112" endx="126.443258852769" xpos="164.3912554797209" endy="406.77455974323" c2x="139.092591061753">
+      <from>6</from>
+      <to>0</to>
+      <inputs default="0" any="0" invert="0">Reset</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="553.0911885174937" c2y="451.3548092479501" c1y="451.9301668042888" description="" straight="1" type="2" ypos="452.5055243606275" endx="591.278999186682" xpos="533.9972831828997" endy="450.7794516916114" c2x="572.1850938520879">
+      <from>7</from>
+      <to>2</to>
+      <inputs default="0" any="0" invert="0">0</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="595.0284979999714" c2y="151.0975037728525" c1y="150.7388457044251" description="" straight="1" type="2" ypos="150.3801876359976" endx="529.3091296356876" xpos="627.888182182113" endy="151.4561618412799" c2x="562.1688138178292">
+      <from>8</from>
+      <to>5</to>
+      <inputs default="0" any="0" invert="0">0</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="944.7712106405247" c2y="844.6478020276904" c1y="843.4258587297292" description="" straight="1" type="2" ypos="842.203915431768" endx="880.4495755427527" xpos="976.9320281894107" endy="845.8697453256516" c2x="912.6103930916387">
+      <from>9</from>
+      <to>10</to>
+      <inputs default="0" any="0" invert="0">0</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="827.8463671461193" c2y="699.6629694672636" c1y="727.3370305327364" description="" straight="1" type="2" ypos="755.0110915982092" endx="827.8463671461194" xpos="827.8463671461194" endy="671.9889084017908" c2x="827.8463671461195">
+      <from>10</from>
+      <to>3</to>
+      <inputs default="0" any="0" invert="0">Back</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="909.0939069997119" c2y="789.3544985134689" c1y="790.0523338071063" description="" straight="1" type="2" ypos="790.7501691007435" endx="959.5193285077643" xpos="883.8811962456857" endy="788.6566632198317" c2x="934.3066177537381">
+      <from>10</from>
+      <to>9</to>
+      <inputs default="0" any="0" invert="0">Video</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="642.3803453704568" c2y="719.7238604524688" c1y="701.360257301588" description="" straight="1" type="2" ypos="682.9966541507073" endx="642.2385154809" xpos="642.4512603152352" endy="738.0874636033495" c2x="642.3094304256784">
+      <from>12</from>
+      <to>13</to>
+      <inputs default="0" any="0" invert="0">0</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="521.8455594989066" c2y="562.3470396531893" c1y="693.9115222009149" description="" straight="0" type="2" ypos="774.185330958872" endx="629.3760432478703" xpos="583.9285778423914" endy="500.9678880643358" c2x="539.6465124521927">
+      <from>13</from>
+      <to>2</to>
+      <inputs default="0" any="0" invert="0">Back</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="717.3873312712345" c2y="702.5685169527361" c1y="721.1001863745853" description="" straight="0" type="2" ypos="762.6318557964346" endx="684.2270800705985" xpos="687.4674568715525" endy="656.0368475308868" c2x="722.3072056709165">
+      <from>13</from>
+      <to>12</to>
+      <inputs default="0" any="0" invert="0">3D</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="988.6666681532258" c2y="739" c1y="704" description="" straight="1" type="2" ypos="669" endx="988.00000175" xpos="989.0000013548387" endy="774" c2x="988.3333349516129">
+      <from>11</from>
+      <to>9</to>
+      <inputs default="0" any="0" invert="0">0</inputs>
+      <outputs></outputs>
+    </transition>
+  </machine>
+</qfsmproject>

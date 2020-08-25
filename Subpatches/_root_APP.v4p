@@ -1,0 +1,393 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\_root_APP.v4p" systemname="_root_electro" filename="W:\electro\Subpatches\_root_electro.v4p" scrollx="15" scrolly="45" locked="0">
+   <BOUNDS type="Window" left="2145" top="390" width="5520" height="12285">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="325">
+   <BOUNDS type="Node" left="1605" top="8310" width="540" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="1605" top="8310">
+   </BOUNDS>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" visible="-1" pintype="Input" values="1">
+   </PIN>
+   <PIN pinname="Render State" visible="-1" slicecount="1" pintype="Input" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Logic" filename="Logic.v4p" nodename="Logic.v4p" componentmode="Hidden" id="441">
+   <BOUNDS type="Node" left="195" top="2745" width="2130" height="270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7575" top="1665" width="17055" height="12750">
+   </BOUNDS>
+   <BOUNDS type="Box" left="195" top="2745">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Debugs" filename="Core\Debugs.v4p" nodename="Core\Debugs.v4p" componentmode="Hidden" id="398">
+   <BOUNDS type="Node" left="2070" top="7875" width="1170" height="270">
+   </BOUNDS>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="ForceQuit" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="10080" top="5565" width="12405" height="9615">
+   </BOUNDS>
+   <PIN pinname="fps" visible="1">
+   </PIN>
+   <PIN pinname="DebugOn" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="ControlPanel" filename="Core\ControlPanel\ControlPanel.v4p" nodename="Core\ControlPanel\ControlPanel.v4p" componentmode="Hidden" id="329">
+   <BOUNDS type="Node" left="195" top="2235" width="2130" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="195" top="2235">
+   </BOUNDS>
+   <PIN pinname="Target FPS" slicecount="1" values="30">
+   </PIN>
+   <BOUNDS type="Window" left="6540" top="3420" width="9720" height="8895">
+   </BOUNDS>
+   <PIN pinname="ForceKill" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="ForceQuit" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="448" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2625" top="8310" width="285" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2625" top="8310" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="398" srcpinname="fps" dstnodeid="448" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Output" filename="Output.v4p" nodename="Output.v4p" componentmode="Hidden" id="482">
+   <BOUNDS type="Node" left="584" top="9571" width="1095" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="5426" width="13680" height="8290">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10410" top="5010" width="11520" height="6450">
+   </BOUNDS>
+   <PIN pinname="Show Cursor" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Handle" visible="1">
+   </PIN>
+   <PIN pinname="Mouse State" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="ActualPixel" visible="1">
+   </PIN>
+   <PIN pinname="Actual BackBuffer SizeXY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="484" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="285" top="900" width="2160" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="285" top="900" width="2790" height="315">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|IVAN RASTER software lab|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="|Lucida Sans Unicode|">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="9">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="483" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="285" top="1215" width="2160" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="285" top="1215" width="2715" height="585">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|http://ivanraster.com/&cr;&lf;office@ivanraster.com|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="|Lucida Sans Unicode|">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="9">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="R (Value Advanced)" componentmode="Hidden" id="485">
+   <BOUNDS type="Node" left="240" top="8970" width="1530" height="270">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Settings/Mouse">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="485" srcpinname="Output" dstnodeid="482" dstpinname="Show Cursor">
+   </LINK>
+   <LINK srcnodeid="398" srcpinname="ForceQuit" dstnodeid="329" dstpinname="ForceKill" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="5325" y="8095">
+   </LINKPOINT>
+   <LINKPOINT x="5640" y="2120">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Visuals" filename="Visuals.v4p" nodename="Visuals.v4p" componentmode="Hidden" id="490">
+   <BOUNDS type="Node" left="1605" top="6915" width="2550" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="8445" top="4545" width="10515" height="6930">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="398" srcpinname="Layer Out" dstnodeid="325" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="CMM" filename="CMM.v4p" nodename="CMM.v4p" componentmode="Hidden" id="455">
+   <BOUNDS type="Node" left="195" top="3255" width="2130" height="270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="11115" top="3345" width="7515" height="10455">
+   </BOUNDS>
+   <BOUNDS type="Box" left="195" top="3255">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="325" srcpinname="Layer Out" dstnodeid="482" dstpinname="Layers">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="491">
+   <BOUNDS type="Node" left="180" top="3705" width="2640" height="900">
+   </BOUNDS>
+   <BOUNDS type="Box" left="180" top="3705" width="2475" height="330">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Placeholders for extentions e.g.:&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="492">
+   <BOUNDS type="Node" left="195" top="4050" width="1140" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="195" top="4050" width="2520" height="330">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Input Encoder (HID, Arduino...)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="493">
+   <BOUNDS type="Node" left="195" top="4425" width="585" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="195" top="4425" width="2520" height="330">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="Sound...">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="494">
+   <BOUNDS type="Node" left="195" top="4800" width="930" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="195" top="4800" width="2520" height="330">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Servers (HTTP, REST, OSC...)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="495">
+   <BOUNDS type="Node" left="195" top="5175" width="990" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="195" top="5175" width="2520" height="330">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|DataSenders (DMX, MIDI, SPI...)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="496">
+   <BOUNDS type="Node" left="210" top="6270" width="495" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="210" top="6270" width="495" height="285">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="etc...">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="497">
+   <BOUNDS type="Node" left="195" top="5550" width="990" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="195" top="5550" width="2520" height="330">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Kinect, OpenVR, Leap...|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (String Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="R (String Advanced)" componentmode="Hidden" id="498">
+   <BOUNDS type="Node" left="1560" top="450" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Settings/Title">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1560" top="450">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="|IVAN RASTER PROJECT|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="499">
+   <BOUNDS type="Box" left="285" top="225" width="3375" height="555">
+   </BOUNDS>
+   <BOUNDS type="Node" left="285" top="225" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="14">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="498" srcpinname="Output" dstnodeid="499" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="500">
+   <BOUNDS type="Node" left="2025" top="10020" width="2640" height="900">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2025" top="10020" width="1155" height="315">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Placeholder for|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="501">
+   <BOUNDS type="Node" left="3255" top="10020" width="990" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3255" top="10020" width="1650" height="300">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Output Multiscreen|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="TempTarget" filename="TempTarget.v4p" nodename="TempTarget.v4p" componentmode="Hidden" id="489">
+   <BOUNDS type="Node" left="1620" top="7440" width="1350" height="270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5670" top="4905" width="8085" height="9015">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="482" srcpinname="ActualPixel" dstnodeid="489" dstpinname="ActualPixel" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="3255" y="9605">
+   </LINKPOINT>
+   <LINKPOINT x="3735" y="8200">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="482" srcpinname="Actual BackBuffer SizeXY" dstnodeid="489" dstpinname="Actual BackBuffer SizeXY" hiddenwhenlocked="1" linkstyle="Bezier">
+   <LINKPOINT x="4125" y="10400">
+   </LINKPOINT>
+   <LINKPOINT x="4110" y="7630">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="490" srcpinname="Layer Out" dstnodeid="489" dstpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="489" srcpinname="Layer" dstnodeid="325" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="IMPOTANT NOTICE WHEN START A NEW PROJECT" filename="-Examples-To-Remove-\IMPOTANT NOTICE WHEN START A NEW PROJECT.v4p" nodename="-Examples-To-Remove-\IMPOTANT NOTICE WHEN START A NEW PROJECT.v4p" componentmode="Hidden" id="506">
+   <BOUNDS type="Node" left="210" top="5945" width="3930" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="3620" width="5160" height="4650">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4815" top="3405" width="9135" height="10755">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Touch (IR Windows Touch)" filename="Utils\Touch\Touch (IR Windows Touch).v4p" nodename="Touch (IR Windows Touch)" componentmode="Hidden" id="358">
+   <BOUNDS type="Node" left="255" top="10020" width="750" height="270">
+   </BOUNDS>
+   <PIN pinname="WindowHandle" visible="1" slicecount="1" values="5310226">
+   </PIN>
+   <PIN pinname="Touch Data" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Mouse Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Use WindowsTouch" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Window" left="7545" top="1725" width="10275" height="9660">
+   </BOUNDS>
+   <PIN pinname="Mouse State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="255" top="10020">
+   </BOUNDS>
+   <PIN pinname="UseMouse" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="482" srcpinname="Mouse State" dstnodeid="358" dstpinname="Mouse State" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="482" srcpinname="Handle" dstnodeid="358" dstpinname="WindowHandle">
+   </LINK>
+   <LINK srcnodeid="485" srcpinname="Output" dstnodeid="358" dstpinname="UseMouse" linkstyle="PolyLine">
+   </LINK>
+   </PATCH>

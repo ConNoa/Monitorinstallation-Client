@@ -1,0 +1,20 @@
+.configrow {
+margin-bottom: 20px;
+}
+
+.womarginbottom{
+	margin-bottom: 0px;
+}
+
+.likebutton{
+	line-height: 1.42857143;
+}
+
+
+.colorquad{
+	min-height: 37px;
+	width: 7%;
+	border-width: 1px;
+border-style: solid;
+}
+

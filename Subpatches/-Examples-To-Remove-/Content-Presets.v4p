@@ -1,0 +1,69 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\Content-Presets.v4p" systemname="Content-Presets" filename="D:\_IR\_Template_2016\APP\Subpatches\Content-Presets.v4p" scrollx="270" scrolly="0">
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1500" top="3398" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1500" top="3398" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE id="2" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="3998" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="3998" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Layer Out" dstnodeid="2" dstpinname="Input Node">
+   </LINK>
+   <BOUNDS type="Window" left="10680" top="7350" width="5700" height="6465">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="Content-Timing" filename="Content-Timing.v4p" nodename="Content-Timing.v4p" componentmode="Hidden" id="27">
+   <BOUNDS type="Node" left="1994" top="2546" width="1740" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="240" width="6595" height="7075">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5820" top="5160" width="7140" height="7395">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 3">
+   </LINK>
+   <NODE systemname="Content-1pixel" filename="Content-1pixel.v4p" nodename="Content-1pixel.v4p" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1687" top="1140" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="0" width="3565" height="4105">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14010" top="1500" width="13125" height="12195">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="Content-SpreadsAndBins" filename="Content-SpreadsAndBins.v4p" nodename="Content-SpreadsAndBins.v4p" componentmode="Hidden" id="12" stayontop="0">
+   <BOUNDS type="Node" left="1838" top="1816" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="0" width="6625" height="5815">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9540" top="1245" width="18390" height="18600">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Layer Out" dstnodeid="1" dstpinname="Layer 2">
+   </LINK>
+   </PATCH>

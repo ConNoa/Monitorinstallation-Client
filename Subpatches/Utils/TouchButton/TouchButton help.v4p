@@ -1,0 +1,393 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="E:\Ilgiz\_PROJECTS\TouchButtonProject\Project\src\TouchButton\bin\Debug\TouchButton (Ivan Rastr Nodes) help.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="945" top="1290" width="7020" height="13965">
+   </BOUNDS>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="225" top="225" width="5100" height="450">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="225" width="5100" height="450">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|TouchButton (Ivan Rastr Nodes)|">
+   </PIN>
+   <PIN pinname="Output String" slicecount="1" visible="0" values="||">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" visible="1" values="14">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="225" top="600" width="5100" height="600">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="600" width="5100" height="600">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="||">
+   </PIN>
+   <PIN pinname="Output String" slicecount="1" visible="0" values="||">
+   </PIN>
+   </NODE>
+   <NODE nodename="TouchButton (Ivan Rastr Nodes)" componentmode="Hidden" id="0" systemname="TouchButton (Ivan Rastr Nodes)" filename="TouchButton2.dll">
+   <BOUNDS type="Node" left="585" top="3015" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="585" top="3015" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Released Data" visible="1">
+   </PIN>
+   <PIN pinname="Touch Data" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   <PIN pinname="OverButtonID" visible="1">
+   </PIN>
+   <PIN pinname="Object Hit" visible="1">
+   </PIN>
+   <PIN pinname="OnRelease" visible="1">
+   </PIN>
+   <PIN pinname="OnPress" visible="1">
+   </PIN>
+   <PIN pinname="IsPressed" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="568" top="6810" width="1320" height="1350">
+   </BOUNDS>
+   <BOUNDS type="Node" left="568" top="6810" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="IsPressed">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="9" values="0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2008" top="6810" width="1320" height="1350">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2008" top="6810" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="OnPress">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="9" values="0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3448" top="6810" width="1320" height="1350">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3448" top="6810" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="OnRelease">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="9" values="0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4903" top="6810" width="1320" height="1350">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4903" top="6810" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Object Hit|">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="9" values="0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="553" top="6045" width="5595" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="553" top="6045" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="OverButtonID">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="9">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="913" top="2280" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="TouchData_TouchButton">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="1213" top="1860" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="ReleasedIDs_TouchButton">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3178" top="2430" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3178" top="2430" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enable">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="2188" top="10485" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="TouchButtons_Transform">
+   </PIN>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="598" top="1485" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="TouchButtons_Transform">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Input Value" dstnodeid="0" dstpinname="Released Data">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Input Value" dstnodeid="0" dstpinname="Touch Data">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Input Value" dstnodeid="0" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enable" linkstyle="VHV">
+   <LINKPOINT x="2995" y="2948">
+   </LINKPOINT>
+   <LINKPOINT x="1760" y="2948">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="OverButtonID" dstnodeid="13" dstpinname="Y Input Value" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="1515" y="4665">
+   </LINKPOINT>
+   <LINKPOINT x="585" y="4665">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Object Hit" dstnodeid="14" dstpinname="Y Input Value" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="1350" y="5033">
+   </LINKPOINT>
+   <LINKPOINT x="4890" y="5033">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="OnRelease" dstnodeid="15" dstpinname="Y Input Value" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="1110" y="5040">
+   </LINKPOINT>
+   <LINKPOINT x="3450" y="5040">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="OnPress" dstnodeid="16" dstpinname="Y Input Value" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="840" y="5048">
+   </LINKPOINT>
+   <LINKPOINT x="2025" y="5048">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="IsPressed" dstnodeid="17" dstpinname="Y Input Value" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="600" y="5048">
+   </LINKPOINT>
+   <LINKPOINT x="600" y="5048">
+   </LINKPOINT>
+   </LINK>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE systemname="Visual-TB" filename="Visual-TB.v4p" nodename="Visual-TB.v4p" componentmode="Hidden" id="67">
+   <BOUNDS type="Node" left="649" top="10000" width="1605" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="6495" width="20215" height="10695">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4245" top="3135" width="20205" height="10695">
+   </BOUNDS>
+   <PIN pinname="Fullscreen" visible="1">
+   </PIN>
+   <PIN pinname="Handle" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="IsPressed" visible="1">
+   </PIN>
+   <PIN pinname="OnPress" visible="1">
+   </PIN>
+   <PIN pinname="OnRelease" visible="1">
+   </PIN>
+   <PIN pinname="Object Hit" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="68" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="645" top="9330" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="645" top="9330" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Fullscreen">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="68" srcpinname="Y Output Value" dstnodeid="67" dstpinname="Fullscreen">
+   </LINK>
+   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="72">
+   <BOUNDS type="Node" left="660" top="12165" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="TouchData_TouchButton">
+   </PIN>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="71">
+   <BOUNDS type="Node" left="2250" top="11565" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="ReleasedIDs_TouchButton">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="TouchState (System Join)" filename="TouchStateJoin.dll" nodename="TouchState (System Join)" componentmode="Hidden" id="70">
+   <BOUNDS type="Node" left="645" top="11625" width="1125" height="270">
+   </BOUNDS>
+   <PIN pinname="Id" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Is New" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Touch Data" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="645" top="11625">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="WindowsTouch (Touch by Ivan Rastr)" filename="WindowsTouch\WinTouch.dll" nodename="WindowsTouch (Touch by Ivan Rastr)" componentmode="Hidden" id="69">
+   <BOUNDS type="Node" left="645" top="10965" width="1650" height="270">
+   </BOUNDS>
+   <PIN pinname="Handle" visible="1" slicecount="1" values="7341630">
+   </PIN>
+   <PIN pinname="Is New" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Id" visible="1">
+   </PIN>
+   <PIN pinname="Released IDs" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="69" srcpinname="Id" dstnodeid="70" dstpinname="Id">
+   </LINK>
+   <LINK srcnodeid="69" srcpinname="PositionXY" dstnodeid="70" dstpinname="PositionXY">
+   </LINK>
+   <LINK srcnodeid="69" srcpinname="Is New" dstnodeid="70" dstpinname="Is New">
+   </LINK>
+   <LINK srcnodeid="70" srcpinname="Touch Data" dstnodeid="72" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="69" srcpinname="Released IDs" dstnodeid="71" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Handle" dstnodeid="69" dstpinname="Handle">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Transform Out" dstnodeid="6" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="67" dstpinname="IsPressed" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="615" y="9083">
+   </LINKPOINT>
+   <LINKPOINT x="1425" y="9083">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="67" dstpinname="OnPress" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="2025" y="9083">
+   </LINKPOINT>
+   <LINKPOINT x="1710" y="9083">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="67" dstpinname="OnRelease" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="3435" y="9075">
+   </LINKPOINT>
+   <LINKPOINT x="1995" y="9075">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="67" dstpinname="Object Hit" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="4905" y="9068">
+   </LINKPOINT>
+   <LINKPOINT x="2250" y="9068">
+   </LINKPOINT>
+   </LINK>
+   </PATCH>

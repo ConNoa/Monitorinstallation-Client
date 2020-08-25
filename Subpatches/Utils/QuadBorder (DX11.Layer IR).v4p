@@ -1,0 +1,63 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\Utils\QuadBorder (DX11.Layer IR).v4p" systemname="QuadBorder (DX11.Layer IR)" filename="D:\_IR\_Template_2016\APP\Subpatches\Utils\QuadBorder (DX11.Layer IR).v4p">
+   <NODE systemname="GS_SuppressDiagonals (DX11.Effect)" filename="dx11\GS_SuppressDiagonals.fx" nodename="GS_SuppressDiagonals (DX11.Effect)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1500" top="1995" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Geometry" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="2055" top="1500" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2055" top="1500" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Geometry Out" dstnodeid="0" dstpinname="Geometry">
+   </LINK>
+   <NODE id="2" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform In|">
+   </PIN>
+   <BOUNDS type="Box" left="1530" top="800" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1530" top="800" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output Node" dstnodeid="0" dstpinname="Transform In">
+   </LINK>
+   <NODE id="3" systemname="IOBox (Color)" componentmode="InABox" nodename="IOBox (Color)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Color">
+   </PIN>
+   <BOUNDS type="Box" left="2880" top="845" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2880" top="845" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="4" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="2595" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="2595" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="4" dstpinname="Input Node">
+   </LINK>
+   <BOUNDS type="Window" left="22875" top="16440" width="6030" height="3585">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <LINK srcnodeid="3" srcpinname="Color Output" dstnodeid="0" dstpinname="Color">
+   </LINK>
+   </PATCH>

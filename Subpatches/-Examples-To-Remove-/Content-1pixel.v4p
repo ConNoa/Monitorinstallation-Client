@@ -1,0 +1,255 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\Content-1pixel.v4p" systemname="Content-1pixel" filename="D:\_IR\_Template_2016\APP\Subpatches\Presets\Content-1pixel.v4p" scrollx="30" scrolly="-360">
+   <NODE id="2" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <BOUNDS type="Box" left="570" top="9090" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="570" top="9090" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="14010" top="1500" width="13125" height="12195">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="570" top="8430" width="10185" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="570" top="8430" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 6" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 8" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 7" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Layer Out" dstnodeid="2" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="30">
+   <BOUNDS type="Node" left="5625" top="1605" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Transition-Presets-1Pixel">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="58">
+   <BOUNDS type="Node" left="420" top="330" width="1845" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="420" top="330" width="8265" height="750">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|1 pixel is two devided by resolution&cr;&lf;All you need is R (1 pixel) and multiply it by exact resolution|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="60">
+   <BOUNDS type="Node" left="2370" top="4020" width="1365" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2370" top="4020" width="2715" height="525">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Pixel Perfect Quads|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="83">
+   <BOUNDS type="Node" left="5775" top="4530" width="1365" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5775" top="4530" width="3450" height="525">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Pixel Perfect from Texture|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="84">
+   <BOUNDS type="Node" left="7425" top="5850" width="1365" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7425" top="5850" width="3870" height="420">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Pixel Perfect Texts|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="92">
+   <BOUNDS type="Node" left="525" top="1605" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="1Pixel">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="510" top="2340" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="92" srcpinname="Input Value" dstnodeid="91" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="93">
+   <BOUNDS type="Box" left="780" top="1935" width="285" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="780" top="1935" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="64,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="93" srcpinname="Y Output Value" dstnodeid="91" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Content-1pixel-Text" filename="Content-1pixel-Text.v4p" nodename="Content-1pixel-Text.v4p" componentmode="Hidden" id="102">
+   <BOUNDS type="Node" left="7305" top="5490" width="2040" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7305" top="5490" width="5710" height="7240">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13080" top="4605" width="11535" height="11205">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="30" srcpinname="Input Value" dstnodeid="102" dstpinname="Alpha" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 4">
+   </LINK>
+   <NODE systemname="Content-1pixel-TempTarget" filename="Content-1pixel-TempTarget.v4p" nodename="Content-1pixel-TempTarget.v4p" componentmode="Hidden" id="103">
+   <BOUNDS type="Node" left="9015" top="7258" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6008" top="3488" width="6015" height="7540">
+   </BOUNDS>
+   <BOUNDS type="Window" left="17850" top="3945" width="12150" height="15705">
+   </BOUNDS>
+   <PIN pinname="Texture SizeXY" visible="1" slicecount="2" values="512,384">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="103" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 5">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Input Value" dstnodeid="103" dstpinname="Alpha" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="Content-1pixel-FileTexture" filename="Content-1pixel-FileTexture.v4p" nodename="Content-1pixel-FileTexture.v4p" componentmode="Hidden" id="104">
+   <BOUNDS type="Node" left="5625" top="4200" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5625" top="4200" width="6175" height="8620">
+   </BOUNDS>
+   <BOUNDS type="Window" left="20640" top="5985" width="6165" height="8610">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="30" srcpinname="Input Value" dstnodeid="104" dstpinname="Alpha" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="104" srcpinname="Layer Out" dstnodeid="6" dstpinname="Layer 3">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="105">
+   <BOUNDS type="Node" left="9135" top="7605" width="1365" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9135" top="7605" width="3300" height="465">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Pixel Perfect TempTarget|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-1pixel-Quads" filename="Content-1pixel-Quads.v4p" nodename="Content-1pixel-Quads.v4p" componentmode="Hidden" id="109">
+   <BOUNDS type="Node" left="2269" top="3627" width="1755" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="795" width="7020" height="7255">
+   </BOUNDS>
+   <BOUNDS type="Window" left="18225" top="4830" width="7020" height="10455">
+   </BOUNDS>
+   <PIN pinname="PixSize" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="109" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Input Value" dstnodeid="109" dstpinname="Alpha" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="Content-1pixel-Grid" filename="Content-1pixel-Grid.v4p" nodename="Content-1pixel-Grid.v4p" componentmode="Hidden" id="127">
+   <BOUNDS type="Node" left="2268" top="6268" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="60" top="3196" width="6690" height="6145">
+   </BOUNDS>
+   <BOUNDS type="Window" left="20160" top="5040" width="10005" height="8535">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="127" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Input Value" dstnodeid="127" dstpinname="Alpha" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="109" srcpinname="PixSize" dstnodeid="127" dstpinname="PixSize" linkstyle="PolyLine" hiddenwhenlocked="1">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="128">
+   <BOUNDS type="Node" left="2385" top="6600" width="1365" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2385" top="6600" width="2715" height="525">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Pixel Perfect Grid|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   </PATCH>

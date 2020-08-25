@@ -1,0 +1,70 @@
+<?xml version='1.0'?>
+<!DOCTYPE qfsmproject SYSTEM 'qfsm.dtd'>
+<qfsmproject version="0.53" author="Qfsm">
+  <machine nummooreout="0" transfontitalic="0" draw_it="1" statefontsize="8" transfont="Helvetica" statefontitalic="0" author="" description="" version="" name="FSM" arrowtype="1" numbits="3" statefontweight="50" statefont="Helvetica" numin="0" transfontsize="8" transfontweight="50" type="2" numout="0" initialstate="0">
+    <outputnames_moore></outputnames_moore>
+    <inputnames></inputnames>
+    <outputnames></outputnames>
+    <itransition ypos="645" endx="168" xpos="134" endy="645"/>
+    <state pencolor="0" radius="40" description="" finalstate="0" moore_outputs="" ypos="645" code="0" xpos="208" linewidth="1">Reset</state>
+    <state pencolor="0" radius="60" description="" finalstate="0" moore_outputs="" ypos="649" code="1" xpos="399" linewidth="1">L-1</state>
+    <state pencolor="0" radius="60" description="" finalstate="0" moore_outputs="" ypos="664" code="3" xpos="803" linewidth="1">L-2</state>
+    <state pencolor="0" radius="60" description="" finalstate="0" moore_outputs="" ypos="447" code="7" xpos="797" linewidth="1">Nums-2</state>
+    <state pencolor="0" radius="60" description="" finalstate="0" moore_outputs="" ypos="423" code="4" xpos="415" linewidth="1">Nums-1</state>
+    <state pencolor="0" radius="60" description="" finalstate="0" moore_outputs="" ypos="425" code="2" xpos="418" linewidth="1">Nums-1</state>
+    <transition c1x="278.3194697157254" c2y="648.0965505868128" c1y="647.1931011736256" description="" straight="1" type="2" ypos="646.2896517604384" endx="339" xpos="247.979204573588" endy="649" c2x="308.6597348578627">
+      <from>0</from>
+      <to>1</to>
+      <inputs default="0" any="0" invert="0">0</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="552.8320887579317" c2y="660.2715562421544" c1y="660.9216507830033" description="" straight="1" type="2" ypos="661.5717453238524" endx="743.159976584506" xpos="457.6681448446446" endy="659.6214617013053" c2x="647.9960326712189">
+      <from>1</from>
+      <to>3</to>
+      <inputs default="0" any="0" invert="0">Globe</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="432.3589059126967" c2y="519.4798776999786" c1y="559.038757516926" description="" straight="1" type="2" ypos="598.5976373338738" endx="433.9736659610103" xpos="431.5515258885399" endy="479.9209978830309" c2x="433.1662859368534">
+      <from>1</from>
+      <to>4</to>
+      <inputs default="0" any="0" invert="0">Nums</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="647.4851014415956" c2y="809.5140513091989" c1y="803.0125321166861" description="" straight="0" type="2" ypos="696.5515258885399" endx="441.4264068711929" xpos="752.5976373338738" endy="691.4264068711929" c2x="526.6675425599839">
+      <from>3</from>
+      <to>1</to>
+      <inputs default="0" any="0" invert="0">Globe</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="780.6337351962993" c2y="539.3804712309232" c1y="573.9013735868189" description="" straight="1" type="2" ypos="608.4222759427149" endx="781.1169810931298" xpos="780.392112247884" endy="504.8595688750271" c2x="780.8753581447145">
+      <from>3</from>
+      <to>7</to>
+      <inputs default="0" any="0" invert="0">Nums</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="837.8045045146981" c2y="573.669422185862" c1y="532.3003132378237" description="" straight="1" type="2" ypos="490.931204289785" endx="837.6810404468204" xpos="837.8662365486373" endy="615.0385311339007" c2x="837.7427724807595">
+      <from>7</from>
+      <to>3</to>
+      <inputs default="0" any="0" invert="0">Nums</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="924.5669801566594" c2y="567.4064994532724" c1y="521.8091672161237" description="" straight="0" type="2" ypos="454.9298232054611" endx="852.9230176602706" xpos="856.473674040958" endy="630.7179882264862" c2x="913.5833039326315">
+      <from>7</from>
+      <to>3</to>
+      <inputs default="0" any="0" invert="0">Globe</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="386.5635019243781" c2y="552.1421005403524" c1y="513.9851832678417" description="" straight="1" type="2" ypos="475.8282659953305" endx="386.5824845373365" xpos="386.5540106178989" endy="590.2990178128636" c2x="386.5729932308574">
+      <from>4</from>
+      <to>1</to>
+      <inputs default="0" any="0" invert="0">Nums</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="504.2297026647131" c2y="559.2718454311648" c1y="512.1051788510367" description="" straight="0" type="2" ypos="454.7999364001908" endx="451.4494365672923" xpos="465.8798982403053" endy="619.8614241292821" c2x="506.0289436564132">
+      <from>4</from>
+      <to>1</to>
+      <inputs default="0" any="0" invert="0">Globe</inputs>
+      <outputs></outputs>
+    </transition>
+  </machine>
+</qfsmproject>

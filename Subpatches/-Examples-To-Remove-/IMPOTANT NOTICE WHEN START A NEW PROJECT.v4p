@@ -1,0 +1,87 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\IMPOTANT NOTICE WHEN START A NEW PROJECT.v4p" systemname="IMPOTANT NOTICE WHEN START A NEW PROJECT" filename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\IMPOTANT NOTICE WHEN START A NEW PROJECT.v4p" bgcolor="12632575" scrollx="15" scrolly="0" locked="0">
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="0">
+   <BOUNDS type="Node" left="825" top="1965" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="825" top="1965" width="7275" height="585">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="..\-Examples-To-Remove-">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="21">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="1" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="825" top="465" width="2160" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="825" top="465" width="7290" height="1230">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|WHEN START A NEW PROJECT DELETE THIS FOLDERS FIRST:|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="|Lucida Sans Unicode|">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="21">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="825" top="3450" width="2160" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="825" top="3450" width="7305" height="4890">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|After deleting \Subpatches\-Examples-To-Remove-  &cr;&lf;red subpatches will appear around the template - delete them too, as well as all comments from here and there.&cr;&lf;&cr;&lf;You are welcome to use any of examples into your projects, &cr;&lf;but  first copy them out of -Examples-To-Remove- folder. &cr;&lf;&cr;&lf;Keep your projects clean!&cr;&lf;&cr;&lf;There is a hidden red node just to make your attention&cr;&lf;to this notice. &cr;&lf;&cr;&lf;The node is behind this comment and it can not affect&cr;&lf;the template and your project in any way.&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="|Lucida Sans Unicode|">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="4815" top="3405" width="9135" height="10755">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="Kalle (VVVV)" nodename="Kalle (VVVV)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="825" top="615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Background Kalle" slicecount="1" values="|1.00000,0.75555,0.75469,0.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Unexisting red node" filename="Unexisting red node.v4p" nodename="Unexisting red node" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="825" top="3735" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="825" top="3735" width="3100" height="3100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="3100" height="3100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="9">
+   <BOUNDS type="Node" left="825" top="2745" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="825" top="2745" width="7275" height="585">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="..\..\Content\CMS">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="21">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   </PATCH>

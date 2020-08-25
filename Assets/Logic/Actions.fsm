@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<!DOCTYPE qfsmproject SYSTEM 'qfsm.dtd'>
+<qfsmproject version="0.53" author="Qfsm">
+  <machine nummooreout="0" transfontitalic="0" draw_it="1" statefontsize="8" transfont="Helvetica" statefontitalic="0" author="" description="" version="" name="Electro-Active" arrowtype="1" numbits="2" statefontweight="50" statefont="Helvetica" numin="0" transfontsize="8" transfontweight="50" type="2" numout="0" initialstate="0">
+    <outputnames_moore></outputnames_moore>
+    <inputnames></inputnames>
+    <outputnames></outputnames>
+    <itransition ypos="244" endx="212" xpos="152" endy="244"/>
+    <state pencolor="0" radius="40" description="" finalstate="0" moore_outputs="" ypos="244" code="0" xpos="252" linewidth="1">Reset</state>
+    <state pencolor="0" radius="40" description="" finalstate="0" moore_outputs="" ypos="248" code="1" xpos="419" linewidth="1">Idle</state>
+    <state pencolor="0" radius="40" description="" finalstate="0" moore_outputs="" ypos="445" code="2" xpos="431" linewidth="1">Move</state>
+    <state pencolor="0" radius="40" description="" finalstate="0" moore_outputs="" ypos="114" code="3" xpos="587" linewidth="1">Touch</state>
+    <transition c1x="320.9923539178625" c2y="246.9859363742658" c1y="245.9718727485316" description="" straight="1" type="2" ypos="244.9578091227974" endx="379" xpos="291.9885308767937" endy="248" c2x="349.9961769589312">
+      <from>0</from>
+      <to>1</to>
+      <inputs default="0" any="0" invert="0">0.1</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="481.200038841916" c2y="364.1384226752847" c1y="317.9521119380036" description="" straight="0" type="2" ypos="284.7658012007223" endx="436.0865726394146" xpos="434.7567719431667" endy="405.324733412566" c2x="488.6433057406653">
+      <from>1</from>
+      <to>2</to>
+      <inputs default="0" any="0" invert="0">OnMove</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="542.5913868398229" c2y="196.1173013986169" c1y="242.8161981674598" description="" straight="0" type="2" ypos="233.5150949363028" endx="580.2037233396942" xpos="456.2852185898873" endy="153.4184046297739" c2x="583.8975550897586">
+      <from>1</from>
+      <to>3</to>
+      <inputs default="0" any="0" invert="0">OnTouch</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="370.7422950270128" c2y="333.7420996070823" c1y="376.8348016301148" description="" straight="0" type="2" ypos="409.9275036531473" endx="408.6934939775867" xpos="411.7666955517259" endy="286.6493975840498" c2x="375.7178945022998">
+      <from>2</from>
+      <to>1</to>
+      <inputs default="0" any="0" invert="0">OnStop</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="492.454811123186" c2y="139.2084417636735" c1y="111.7716799313432" description="" straight="0" type="2" ypos="123.334918099013" endx="426.1554175279993" xpos="548.1045079207793" endy="208.6452035960037" c2x="423.8051143255926">
+      <from>3</from>
+      <to>1</to>
+      <inputs default="0" any="0" invert="0">OnRelease</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="635.3717940159133" c2y="397.7453274501569" c1y="306.1336290234738" description="" straight="0" type="2" ypos="148.5511560359373" endx="460.539419757125" xpos="607.1548410209634" endy="418.0292254391467" c2x="521.1281667679884">
+      <from>3</from>
+      <to>2</to>
+      <inputs default="0" any="0" invert="0">OnMove</inputs>
+      <outputs></outputs>
+    </transition>
+  </machine>
+</qfsmproject>

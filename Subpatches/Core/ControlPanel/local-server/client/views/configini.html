@@ -1,0 +1,206 @@
+﻿<div class="pageheader ng-scope">
+    <h1>Editing {{path}}</h1>
+    <div class="breadcrumb-wrapper hidden-xs">
+        <span class="label">You are here:</span>
+        <ol ng-show="admin" class="breadcrumb">
+			<li><a href="index-admin.html">Configuration</a></li>
+            <li class="active">{{path}} <a href="" ng-click="delete()"> (Delete) </a></li>
+        </ol>
+		<ol ng-show="!admin" class="breadcrumb">
+            <li><a href="index.html">Configuration</a></li>
+        </ol>
+    </div>
+</div>
+
+<section id="main-content" class="animated fadeInRight ng-scope">
+<div class="row">
+	<div ng_show="checkLength('toggles', admin)" class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3  class="panel-title">Toggles</h3>
+                <div class="actions pull-right">
+				<span ng-show="admin">
+					<input type="checkbox" class="js-switch ng-isolate-scope ng-valid ng-dirty" ui-switch="{size: 'small', color:'#FF0000', secondaryColor: '#868686'}" ng-model="checkToggles" checked="" id="checkOne" data-switchery="true" style="display: none;">
+                </span>
+					<i ng-show="admin" ng-click = "addValue('toggle')" class="fa fa-plus"></i>
+                    <i data-widget-toggle="" class="fa fa-chevron-up"></i>
+                </div>
+            </div>
+            
+            <div class="panel-body" style="display: block;">
+                <div class="form-horizontal form-border ng-pristine ng-valid">
+                    <div ng-repeat="(name, toggle) in data.Toggles" class = 'row configrow'>
+                        <div class = "col-sm-1" style = "text-align: left">
+                            <label class="control-label">{{name}}</label>
+                        </div>
+                        
+                        <div ng-init = "t=toggle[0]" class="col-sm-1">
+                            <input type="checkbox" class="js-switch ng-isolate-scope ng-valid ng-dirty" ui-switch="{size: 'large', color:'#FF0000', secondaryColor: '#868686'}" id="{{name}}" ng-model="t"> 
+                        </div>
+                        
+                        <div class = "col-sm-3">
+                            <span ng-show="t != toggle[0]">
+                                <button  type="button" class="btn btn-success womarginbottom" ng-click="Save(t, name, 'toggle')">
+                                    Save
+                                </button>
+                            </span>
+                            <span ng-show = "checkToggles">
+                                <button class="btn btn-danger womarginbottom" type="button" ng-click="Delete(name, 'toggle')">
+                                    Delete
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+	
+    <div ng_show="checkLength('values', admin)" class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3  class="panel-title">Values</h3>
+                <div class="actions pull-right">
+                            <!-- <label for="checkOne" class="setting-list label" style="color: #000;">Del</label> -->
+                    <span ng-show="admin">
+						<input type="checkbox" class="js-switch ng-isolate-scope ng-valid ng-dirty" ui-switch="{size: 'small', color:'#FF0000', secondaryColor: '#868686'}" ng-model="checkValues" checked="" id="checkOne" data-switchery="true" style="display: none;">
+                    </span>
+					<i ng-show="admin" ng-click = "addValue('value')" class="fa fa-plus"></i>
+                    <i data-widget-toggle="" class="fa fa-chevron-up"></i>
+                    
+                </div>
+            </div>
+            
+            <div class="panel-body" style="display: block;">
+                <div class="form-horizontal form-border ng-pristine ng-valid">
+                    <div ng-repeat="(name, value) in data.Values" class = 'row configrow'>
+                        <div class = "grid-container">
+							<div class = "item1" style = "text-align: left">
+								<label class="control-label">{{name}}</label>
+							</div>
+							
+							<div ng-show="!checkValues" ng-repeat="singleValue in value | valueSeparator track by $index">
+								<input class="form-control" type="number" id="{{name}}" ng-model="singleValue" title="{{singleValue}}" ng-change="$parent.value = changeSpread(value,singleValue,$index,'values')">
+							</div>
+							
+							<div ng-show="checkValues">
+								<input class="form-control" id="{{name}}" title="{{value+''}}" ng-model="value">
+							</div>
+							
+							<div class = "item2">
+								<span ng-show="!compare(value, data.Values[name])">
+									<button  type="button" class="btn btn-success womarginbottom" ng-click="Save(value, name, 'value')">
+										Save
+									</button>
+								</span>
+								
+								<span ng-show = "compare(value, data.Values[name]) && checkValues">
+									<button class="btn btn-danger womarginbottom" type="button" ng-click="Delete(name, 'value')">
+										Delete
+									</button>
+								</span>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div ng_show="checkLength('strings', admin)" class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Strings</h3>
+                <div class="actions pull-right">
+                    <span ng-show="admin">
+						<input type="checkbox" class="js-switch ng-isolate-scope ng-valid ng-dirty" ui-switch="{size: 'small', color:'#FF0000', secondaryColor: '#868686'}" ng-model="checkStrings" checked="" id="checkOne" data-switchery="true" style="display: none;">
+                    </span>
+					<i ng-show="admin" ng-click = "addValue('string')" class="fa fa-plus"></i>
+					<i data-widget-toggle="" class="fa fa-chevron-up"></i>
+                    <!-- <i data-widget-close="" class="fa fa-times"></i> -->
+                </div>
+            </div>
+            
+            <div class="panel-body" style="display: block;">
+                <div class="form-horizontal form-border ng-pristine ng-valid">
+                    <div  ng-repeat="(name, value) in data.Strings" class = 'row configrow'>
+						<div class = "grid-container">
+							<div class = "item1" style = "text-align: left">
+								<label class="control-label">{{name}}</label>
+							</div>
+							
+							<div ng-show="!checkStrings" ng-repeat="singleValue in value | stringSeparator track by $index">
+								<input class="form-control" type="text" id="{{name}}" ng-model="singleValue" title="{{singleValue}}" ng-change="$parent.value = changeSpread(value,singleValue,$index,'strings')">
+							</div>
+							
+							<div ng-show="checkStrings" class="item3">
+								<input class="form-control" id="{{name}}" title="{{value+''}}" ng-model="value">
+							</div>
+							
+							<div class = "item2">
+								<span ng-show="!compare(value, data.Strings[name])">
+									<button  type="button" class="btn btn-success womarginbottom" ng-click="Save(value, name, 'string')">
+										Save
+									</button>
+								</span>
+								<span ng-show = "compare(value, data.Strings[name]) && checkStrings">
+									<button class="btn btn-danger womarginbottom" type="button" ng-click="Delete(name, 'string')">
+										Delete
+									</button>
+								</span>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       <!-- <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Color values</h3>
+                <div class="actions pull-right">
+                    <input type="checkbox" class="js-switch ng-isolate-scope ng-valid ng-dirty" ui-switch="{size: 'small', color:'#FF0000', secondaryColor: '#868686'}" ng-model="checkColors" checked="" id="checkOne" data-switchery="true" style="display: none;">
+                    <i ng-click = "addValue('color')" class="fa fa-plus"></i>
+                    <i data-widget-toggle="" class="fa fa-chevron-up"></i>
+                    <!-- <i data-widget-close="" class="fa fa-times"></i> -->
+        <!--        </div>
+            </div>
+            
+            <div class="panel-body" style="display: block;">
+                <div class="form-horizontal form-border ng-pristine ng-valid">
+                    <div  ng-repeat="(name, value) in data.Colors" class = 'row configrow'>
+                        <div class = "col-sm-3" style = "text-align: right">
+                            <label class="control-label">{{name}}</label>
+                        </div>
+                        
+                        <div class="col-sm-5">
+                            <!-- <input class="form-control" id="{{name}}" ng-model="value"> -->
+         <!--                   <input class="form-control" colorpicker="rgba" type="text" ng-model="value" />
+                            <!-- <input minicolors class="form-control" type="text" ng-model="value"> -->
+        <!--                </div>
+                        <div class="col-sm-1 colorquad" ng-style="{ 'backgroundColor': value }">
+                        </div>
+                        
+                        <div class = "col-sm-3">
+                            <span ng-show="value != data.Colors[name]">
+                                <button  type="button" class="btn btn-success womarginbottom" ng-click="Save(value, name, 'color')">
+                                    Save
+                                </button>
+                            </span>
+                            <span ng-show = "checkColors">
+                                <button class="btn btn-danger womarginbottom" type="button" ng-click="Delete(name, 'color')">
+                                    Delete
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+</section>

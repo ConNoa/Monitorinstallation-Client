@@ -1,0 +1,165 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\CMM-README.v4p" systemname="CMM-README" filename="D:\_IR\_Template_2016\APP\Subpatches\CMM-README.v4p">
+   <NODE id="0" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="990" top="4020" width="1155" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="990" top="4020" width="3915" height="480">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Store all the media files here|">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="1">
+   <BOUNDS type="Node" left="5490" top="3990" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5490" top="3990" width="3420" height="510">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="..\Content">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="2">
+   <BOUNDS type="Node" left="5460" top="4575" width="2265" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5460" top="4575" width="5250" height="300">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Content folder MUST NOT be in the project repository (.gitignore)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="3">
+   <BOUNDS type="Node" left="1050" top="4740" width="5145" height="900">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1050" top="4740" width="7830" height="1830">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Ususally, the content includes:&cr;&lf;- Image sets for slideshows, presentations (* .jpg, * .png, * .dds)&cr;&lf;- video files (* .mp4, * .avi, *.mov for HAP)&cr;&lf;- texts, tables (* .txt, *. csv, * .json, etc.)&cr;&lf;- large sets of 3D models with textures (* .obj, * .mtl, * .fbx, etc.)&cr;&lf;etc|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="4" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="645" top="6930" width="5295" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="645" top="6930" width="285" height="780">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="!">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="25">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="5">
+   <BOUNDS type="Node" left="1050" top="6660" width="5145" height="900">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1050" top="6660" width="7860" height="1440">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|If necessary, create a folder structure:&cr;&lf;Content \ Slideshow ... Content \ BG, etc.&cr;&lf;&cr;&lf;The \ Content \ CMS \ folder is filled automatically when using the CMS.&cr;&lf;Do not save anything in this folder manually.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="6" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="1050" top="8280" width="5295" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1050" top="8280" width="12960" height="885">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|While working on the application, delete these comments.&cr;&lf;The structure of nodes will change according with the actual application.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="645" top="8100" width="5295" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="645" top="8100" width="285" height="780">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="!">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="25">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="7260" top="5025" width="16020" height="13200">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="8" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="990" top="1830" width="2640" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="990" top="1830" width="7050" height="1665">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Here you create the structure of the media displayed in the application:&cr;&lf;&cr;&lf;- links to all media files (images, videos) should be here&cr;&lf;- titles, headers, texts &cr;&lf;- contanet structure&cr;&lf;- language versions|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="9">
+   <BOUNDS type="Node" left="990" top="180" width="2955" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="990" top="180" width="8955" height="1575">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|CMM is for Content Managment Module.&cr;&lf;&cr;&lf;All the media is loading here and many S nodes for the media, content, titles etc. must be here |">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   </PATCH>

@@ -1,0 +1,69 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\CMM-Presets-Logic.v4p" systemname="CMM-Presets-Logic" filename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\CMM-Presets-Logic.v4p">
+   <NODE systemname="SectionSplit (IR.CMS)" filename="..\CMS\CMSReader2016.dll" nodename="SectionSplit (IR.CMS)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1500" top="2380" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1500" top="2380" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Section" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Content" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1500" top="1975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <NODE systemname="ContentSplit (IR.CMS)" filename="..\CMS\CMSReader2016.dll" nodename="ContentSplit (IR.CMS)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="2610" top="2860" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2610" top="2860" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Content" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Text" visible="1">
+   </PIN>
+   <PIN pinname="Title" visible="1">
+   </PIN>
+   <PIN pinname="Type" visible="1">
+   </PIN>
+   <PIN pinname="File" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="3" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input Node|">
+   </PIN>
+   <BOUNDS type="Box" left="1515" top="1500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1515" top="1500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="3285" top="4005" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="CMM-Logic-Filenames">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output Node" dstnodeid="0" dstpinname="Section">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output Node" dstnodeid="1" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Content" dstnodeid="2" dstpinname="Content">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="File" dstnodeid="4" dstpinname="Input Value">
+   </LINK>
+   <BOUNDS type="Window" left="-1" top="-1" width="4885" height="5605">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   </PATCH>

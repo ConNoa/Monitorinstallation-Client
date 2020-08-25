@@ -1,0 +1,115 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="G:\RVA\Lexus 2015\_Photosurface2\Subpatches\Keyboard\ClearDepth.v4p" systemname="ClearDepth" filename="G:\RVA\Lexus 2015\_Photosurface2\Subpatches\Keyboard\ClearDepth.v4p">
+   <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="570" top="1335" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="WithinProjection (DX11.Layer)" nodename="WithinProjection (DX11.Layer)" componentmode="Hidden" id="1" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll">
+   <BOUNDS type="Node" left="555" top="1680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="690" top="975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="CenterZ" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="CenterY" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="CenterX" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Pitch" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Yaw" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Roll" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="TranslateZ" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="DepthStencil (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DepthStencil (DX11.RenderState)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="465" top="660" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="WriteOnly">
+   </PIN>
+   </NODE>
+   <NODE systemname="Blend (DX11.RenderState Advanced)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState Advanced)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="345" top="300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Operation" slicecount="1" values="Add">
+   </PIN>
+   <PIN pinname="Alpha Operation" slicecount="1" values="Add">
+   </PIN>
+   <PIN pinname="Source Blend" slicecount="1" values="Zero">
+   </PIN>
+   <PIN pinname="Source Alpha Blend" slicecount="1" values="Zero">
+   </PIN>
+   <PIN pinname="Destination Blend" slicecount="1" values="One">
+   </PIN>
+   <PIN pinname="Destination Alpha Blend" slicecount="1" values="One">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Render State" dstnodeid="3" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="1" dstpinname="Layer In">
+   </LINK>
+   <NODE id="5" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
+   </PIN>
+   <BOUNDS type="Box" left="555" top="2280" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="555" top="2280" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Layer Out" dstnodeid="5" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Render State" dstnodeid="0" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="0" dstpinname="Transform">
+   </LINK>
+   <BOUNDS type="Window" left="17175" top="12135" width="3435" height="4470">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="31.9.0">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2565" top="675" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2565" top="675" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enabled">
+   </LINK>
+   </PATCH>
