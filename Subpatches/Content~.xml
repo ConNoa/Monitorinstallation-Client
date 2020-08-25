@@ -1,0 +1,253 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\Content.v4p" systemname="Content" filename="D:\_IR\_Template_2016\APP\Subpatches\Content.v4p" scrollx="90" scrolly="30">
+   <BOUNDS type="Window" left="7290" top="2235" width="10605" height="11370">
+   </BOUNDS>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="1875" top="8415" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1875" top="8415" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1800" top="7110" width="510" height="270">
+   </BOUNDS>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Blend">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="33" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="375" top="105" width="5295" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="375" top="105" width="5385" height="795">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Content is for all the Content &amp; Media. &cr;&lf;Most of visual and all media parts are here.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="38" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="360" top="1230" width="5295" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="360" top="1230" width="285" height="780">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="!">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="25">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="40" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="720" top="1965" width="5295" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="720" top="1965" width="10470" height="870">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Delete this comments when create your own app&cr;&lf;All nodes below must be changed according to your actual app.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="41" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="300" top="2100" width="5295" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="300" top="2100" width="285" height="780">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="!">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="25">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="42">
+   <BOUNDS type="Node" left="7020" top="1440" width="1785" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7020" top="1440" width="3225" height="300">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;&lt;&lt; right click to open &amp; read comments|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-MainMenu" filename="-Examples-To-Remove-\Content-MainMenu.v4p" nodename="-Examples-To-Remove-\Content-MainMenu.v4p" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="4920" top="7155" width="1545" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3355" top="5358" width="3130" height="3595">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7605" top="2970" width="13755" height="14985">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-README" filename="-Examples-To-Remove-\Content-README.v4p" nodename="-Examples-To-Remove-\Content-README.v4p" componentmode="Hidden" id="37">
+   <BOUNDS type="Node" left="780" top="1440" width="6120" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="780" top="1440" width="11010" height="12540">
+   </BOUNDS>
+   <BOUNDS type="Window" left="15945" top="3945" width="12495" height="12255">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="78">
+   <BOUNDS type="Node" left="1860" top="7755" width="3480" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="9">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="1860" top="7755">
+   </BOUNDS>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 9" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 8" visible="1">
+   </PIN>
+   <PIN pinname="Layer 7" visible="1">
+   </PIN>
+   <PIN pinname="Layer 6" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-Sliders-Scrolls" filename="Content-Sliders-Scrolls.v4p" nodename="-Examples-To-Remove-\Content-Sliders-Scrolls.v4p" componentmode="Hidden" id="77">
+   <BOUNDS type="Node" left="4275" top="5535" width="1950" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2725" top="3985" width="3100" height="3100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4980" top="5355" width="16425" height="8415">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-Text-Keyboard" filename="Content-Text-Keyboard.v4p" nodename="-Examples-To-Remove-\Content-Text-Keyboard.v4p" componentmode="Hidden" id="76">
+   <BOUNDS type="Node" left="3915" top="5175" width="1935" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2365" top="3625" width="3100" height="3100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="11595" top="5175" width="11730" height="11160">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-3D" filename="Content-3D.v4p" nodename="-Examples-To-Remove-\Content-3D.v4p" componentmode="Hidden" id="75">
+   <BOUNDS type="Node" left="4605" top="5890" width="1785" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2508" top="3515" width="4195" height="4750">
+   </BOUNDS>
+   <BOUNDS type="Window" left="12075" top="4230" width="15150" height="11385">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-Timing" filename="Content-Timing.v4p" nodename="Content-Timing.v4p" componentmode="Hidden" id="74">
+   <BOUNDS type="Node" left="3585" top="4830" width="1980" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1591" top="2524" width="6595" height="7075">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7005" top="11040" width="10260" height="7395">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-1pixel" filename="Content-1pixel.v4p" nodename="Content-1pixel.v4p" componentmode="Hidden" id="73">
+   <BOUNDS type="Node" left="2190" top="3555" width="1680" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="503" top="2415" width="3565" height="4105">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14010" top="1500" width="13125" height="12195">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-SpreadsAndBins" filename="Content-SpreadsAndBins.v4p" nodename="Content-SpreadsAndBins.v4p" componentmode="Hidden" id="72" stayontop="0">
+   <BOUNDS type="Node" left="3241" top="4501" width="2160" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1403" top="2685" width="6625" height="5815">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9540" top="1245" width="18390" height="18600">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-Touchbutton" filename="Content-Touchbutton.v4p" nodename="-Examples-To-Remove-\Content-Touchbutton.v4p" componentmode="Hidden" id="71">
+   <BOUNDS type="Node" left="2535" top="3877" width="1980" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="805" top="1980" width="3460" height="4195">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10680" top="480" width="16155" height="8790">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="73" srcpinname="Layer" dstnodeid="78" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="71" srcpinname="Layer Out" dstnodeid="78" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="72" srcpinname="Layer Out" dstnodeid="78" dstpinname="Layer 4">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Layer" dstnodeid="78" dstpinname="Layer 5">
+   </LINK>
+   <LINK srcnodeid="76" srcpinname="Layer" dstnodeid="78" dstpinname="Layer 6">
+   </LINK>
+   <LINK srcnodeid="77" srcpinname="Layer Out" dstnodeid="78" dstpinname="Layer 7">
+   </LINK>
+   <LINK srcnodeid="75" srcpinname="Layer" dstnodeid="78" dstpinname="Layer 8">
+   </LINK>
+   <LINK srcnodeid="78" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Render State" dstnodeid="78" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Layer Out" dstnodeid="78" dstpinname="Layer 9">
+   </LINK>
+   <NODE systemname="Content-Logic" filename="-Examples-To-Remove-\Content-Logic.v4p" nodename="-Examples-To-Remove-\Content-Logic.v4p" componentmode="Hidden" id="70">
+   <BOUNDS type="Node" left="2890" top="4190" width="1920" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="330" top="2003" width="5230" height="4375">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10575" top="7620" width="9810" height="10695">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="70" srcpinname="Layer" dstnodeid="78" dstpinname="Layer 3">
+   </LINK>
+   </PATCH>

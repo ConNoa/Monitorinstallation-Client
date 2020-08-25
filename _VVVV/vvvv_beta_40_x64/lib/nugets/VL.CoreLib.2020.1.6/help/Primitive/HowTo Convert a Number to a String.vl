@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="RoRsssDnoNEQO6f7DvWeaD" LanguageVersion="2020.1.6.170" Version="0.128" IsTrusted="true">
+  <NugetDependency Id="HfkGrVVgnZsNVFBDyFKcKe" Location="VL.CoreLib" Version="2020.1.6" />
+  <Patch Id="P85SE5nNbYrMQdk1eOd1C3">
+    <Canvas Id="PZyXfNyN5ENN77CdlcP4GT" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="Br5yy80rBedOn3Frnun3HH">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="PHmxKkXlNuiP78jqX28vaC">
+        <Canvas Id="Bnb0gY2YjhgQMhsxpe2KjW" CanvasType="Group">
+          <Node Bounds="115,269,55,19" Id="ImD0cNxWOBQO13fidCGZjW">
+            <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="ToString" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="OmmB2z0ROHKQJLPREsuESs" Name="Input" Kind="InputPin" />
+            <Pin Id="CZrDQMJlLwZOVEuVMI2STY" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="H0q2lM0qMq7OQFrZQg3e1C" Comment="Float32" Bounds="117,214,35,15" ShowValueBox="true" isIOBox="true" Value="-0.42">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="TaI2YJBsyICPRNJsxUMvbk" Comment="" Bounds="117,343,35,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="120,536,56,26" Id="Mv0DHMw113FLyHg8U8QTIY">
+            <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="ToString (Format)" />
+              <CategoryReference Kind="Category" Name="Conversion" NeedsToBeDirectParent="true" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="PV5PYDQdLcULIN9zrFE0ku" Name="Input" Kind="InputPin" />
+            <Pin Id="CKZsoRtyr3uNSTcJ8NACSB" Name="Format" Kind="InputPin" />
+            <Pin Id="Cv5p7XEinQ5LElyXRActH3" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="Mlk22jNzuNMQVa9jdA5OWk" Comment="" Bounds="122,609,65,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="AOrDLXgemZuQKe7P4h3LIv" Comment="" Bounds="122,481,51,15" ShowValueBox="true" isIOBox="true" Value="-0.42">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="FU0yxvjZe13LkwnCO1Ff8V" Comment="Format" Bounds="173,518,57,15" ShowValueBox="true" isIOBox="true" Value="00.#0000">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="TjUw0IULCeaNwKKBmpj3yP" Bounds="265,787,255,19" ShowValueBox="true" isIOBox="true" Value="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="EffuUvPk7STPicRSeg57kd" Bounds="206,768,205,19" ShowValueBox="true" isIOBox="true" Value="Standard Numeric Format Strings">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="GxJoa0g9ZTqOYyfBp2LOmR" Bounds="231,544,204,19" ShowValueBox="true" isIOBox="true" Value="Pad Numbers with Leading Zeros">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="TewlXCqqVjvOjhGJnM5rsC" Bounds="289,563,255,19" ShowValueBox="true" isIOBox="true" Value="https://docs.microsoft.com/en-us/dotnet/standard/base-types/how-to-pad-a-number-with-leading-zeros">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="LIm92WsbWgFNpXkLMzbq3y" Bounds="55,144,295,35" ShowValueBox="true" isIOBox="true" Value="Use the ToString node!">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="226,269,55,19" Id="M2Bk1W5AyeuMxnLAtE0wsI">
+            <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="ToString" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="N2oNu8usRhJMkAQrYuHPOt" Name="Input" Kind="InputPin" />
+            <Pin Id="Rc1hyBpSpb0OYBlz9rcbH8" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="Nd6rgupzng2LZSW5dd7zCK" Comment="" Bounds="228,343,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="I7IUJmG5bPkQNxrU7NIqG2" Comment="Integer32" Bounds="228,214,35,15" ShowValueBox="true" isIOBox="true" Value="42">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="344,269,55,19" Id="R4rQf15cwC1Nnthy4jRYz0">
+            <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="ToString" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="NFKJv3PQwHGOSvojMCawzJ" Name="Input" Kind="InputPin" />
+            <Pin Id="T7zRqnjMm4tN5Vb2hJEKnU" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="SsTVAO9j5grOIcW78URt48" Comment="" Bounds="346,343,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="IWD12ZympLtNdm60AnKrN1" Comment="Boolean" Bounds="346,214,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="460,269,55,19" Id="OcvuebDvVEgNC7bJeydi7U">
+            <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="ToString" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="UcagxGZpKy7PZ0XfKmKmgD" Name="Input" Kind="InputPin" />
+            <Pin Id="KPpC6TECuNSPrdQf21femz" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="NCJFpFjj7ZROS634dtZWHx" Comment="" Bounds="462,343,71,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="T9Z6C17aHWaMwvvlhBKTT8" Comment="Vector2" Bounds="462,214,35,28" ShowValueBox="true" isIOBox="true" Value="42, 0.42">
+            <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Vector2" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="BeHWwG5M5QXQa9sgrHXlh6" Bounds="55,422,266,24" ShowValueBox="true" isIOBox="true" Value="Conversion with custom formatting">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="BifKttNVnUHOyCzg12A9cA" Bounds="231,563,63,20" ShowValueBox="true" isIOBox="true" Value="Options:">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="119,760,56,26" Id="HFy7Qp9fJ1ZLoxBf740D9v">
+            <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="ToString (Format)" />
+              <CategoryReference Kind="Category" Name="Conversion" NeedsToBeDirectParent="true" />
+            </p:NodeReference>
+            <Pin Id="FDhQxjJgLj2L7CW5alql3v" Name="Input" Kind="InputPin" />
+            <Pin Id="NwlLe3gU2xZPFGOEmf3iDO" Name="Format" Kind="InputPin" />
+            <Pin Id="LHxbDEyahPNLQUPOzzJAl9" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="FBom0pkY7UeMIFPq0TjEyS" Comment="" Bounds="121,833,49,15" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">7</p:fontsize>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="VCjmVlw9LBgOmkiOWezksN" Comment="" Bounds="121,705,51,15" ShowValueBox="true" isIOBox="true" Value="1.21">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Pyt51uWtioSOxAyiPTMJm3" Comment="Format" Bounds="172,740,32,15" ShowValueBox="true" isIOBox="true" Value="f4">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="He5EWOuBvxON5T90FH8Tdg" Bounds="206,787,63,20" ShowValueBox="true" isIOBox="true" Value="Options:">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="HBOY18aWYNOL0CwZZUT9qW" Bounds="265,842,258,19" ShowValueBox="true" isIOBox="true" Value="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="L3ypeU5HZxvMjUQFisA43Q" Bounds="206,823,205,19" ShowValueBox="true" isIOBox="true" Value="Standard Numeric Format Strings">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Ds6YBVkLU3dMR25YVn7ncL" Bounds="206,842,63,20" ShowValueBox="true" isIOBox="true" Value="Options:">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="BW6Q7VFSYQtLcMPHRel3ks" Name="Create" />
+        <Patch Id="G2YZApYZuKPNz7kaaj9qS0" Name="Update" />
+        <ProcessDefinition Id="UBeSzUTY2XmPDTaTT2rHwx">
+          <Fragment Id="R0TJBcoPiatOBSahNUxNn2" Patch="BW6Q7VFSYQtLcMPHRel3ks" Enabled="true" />
+          <Fragment Id="MpK6aubk56PPAjmT7apKnb" Patch="G2YZApYZuKPNz7kaaj9qS0" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="CUMHSO87iChMaGqQBUnltu" Ids="H0q2lM0qMq7OQFrZQg3e1C,OmmB2z0ROHKQJLPREsuESs" />
+        <Link Id="Sj0jnsOyN54NN4X2rvhy7Q" Ids="CZrDQMJlLwZOVEuVMI2STY,TaI2YJBsyICPRNJsxUMvbk" />
+        <Link Id="O20nCzsQpb6PJEr75En9Vy" Ids="Cv5p7XEinQ5LElyXRActH3,Mlk22jNzuNMQVa9jdA5OWk" />
+        <Link Id="U0LPPvLEeLxMuiCFvNbrs1" Ids="AOrDLXgemZuQKe7P4h3LIv,PV5PYDQdLcULIN9zrFE0ku" />
+        <Link Id="JXeNWrWYTj9MnNIfqbFcnT" Ids="FU0yxvjZe13LkwnCO1Ff8V,CKZsoRtyr3uNSTcJ8NACSB" />
+        <Link Id="N7ememoaLwKLjv7BkgT0KK" Ids="Rc1hyBpSpb0OYBlz9rcbH8,Nd6rgupzng2LZSW5dd7zCK" />
+        <Link Id="O8SNsPUGVVpOjb5eUn8xxf" Ids="I7IUJmG5bPkQNxrU7NIqG2,N2oNu8usRhJMkAQrYuHPOt" />
+        <Link Id="IsqD2um3aMOP0lnD6ZDgW9" Ids="T7zRqnjMm4tN5Vb2hJEKnU,SsTVAO9j5grOIcW78URt48" />
+        <Link Id="QpI7LB9ThOMOyl8dcdVkEm" Ids="IWD12ZympLtNdm60AnKrN1,NFKJv3PQwHGOSvojMCawzJ" />
+        <Link Id="MrcpVmX1nkwP3NBoPMeJKl" Ids="KPpC6TECuNSPrdQf21femz,NCJFpFjj7ZROS634dtZWHx" />
+        <Link Id="SlsD6iKxVM2OHpzHJqar8R" Ids="T9Z6C17aHWaMwvvlhBKTT8,UcagxGZpKy7PZ0XfKmKmgD" />
+        <Link Id="GhKU9H1AbZkQa6dQ8KD8nk" Ids="LHxbDEyahPNLQUPOzzJAl9,FBom0pkY7UeMIFPq0TjEyS" />
+        <Link Id="O3heOnPknmFPasgbQrQZOZ" Ids="Pyt51uWtioSOxAyiPTMJm3,NwlLe3gU2xZPFGOEmf3iDO" />
+        <Link Id="JZ4n2lScugyPWLgqaejHEW" Ids="VCjmVlw9LBgOmkiOWezksN,FDhQxjJgLj2L7CW5alql3v" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="MPnURs3fFlKNqqfzMlTnyZ" Location="VL.Skia" Version="2020.1.6" />
+</Document>

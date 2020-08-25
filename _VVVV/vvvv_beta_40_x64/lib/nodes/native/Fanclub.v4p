@@ -1,0 +1,57 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50debug39.1.dtd" >
+   <PATCH nodename="C:\Users\joreg\Documents\repos\vvvv\public\vvvv45\lib\nodes\native\Fanclub.v4p" systemname="FanClub" filename="C:\Users\joreg\Documents\repos\vvvv\public\vvvv45\lib\nodes\native\Fanclub\FanClub.v4p">
+   <BOUNDS type="Window" left="2535" top="1425" width="7500" height="5550">
+   </BOUNDS>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="1560" top="1845" width="5385" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1560" top="1845" width="4335" height="390">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|You are not alone in this!|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="1" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="1560" top="2220" width="2805" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1560" top="2220" width="1485" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Join us in the chat:|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="0">
+   <BOUNDS type="Node" left="1560" top="2475" width="3465" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1560" top="2475" width="3465" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="https://riot.im/app/#/room/#vvvv:matrix.org">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="URL">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.3.1">
+   </PACK>
+   <PACK Name="Happy.fxh" Version="3.0.0">
+   </PACK>
+   <PACK Name="InstanceNoodles" Version="0.6">
+   </PACK>
+   <PACK Name="addonpack" Version="38.1.0">
+   </PACK>
+   </PATCH>

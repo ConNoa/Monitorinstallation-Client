@@ -1,0 +1,373 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\Core\ControlPanel\ControlPanel-Quit.v4p" systemname="ControlPanel-Quit" filename="D:\_IR\_Template_2016\APP\Subpatches\Core\ControlPanel\ControlPanel-Quit.v4p" scrollx="0" scrolly="-360">
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="2445" top="3345" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="ShellExecute (Windows)" nodename="ShellExecute (Windows)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="3345" top="1965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Do Execute" visible="1">
+   </PIN>
+   <PIN pinname="File" slicecount="1" values="..\..\..\_VVVV\KillVVVV\killVVVV.bat">
+   </PIN>
+   </NODE>
+   <NODE systemname="DoQuit (VVVV)" nodename="DoQuit (VVVV)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="2460" top="3780" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Quit VVVV" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Query Save" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE id="5" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="ForceQuit">
+   </PIN>
+   <BOUNDS type="Box" left="2430" top="495" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2430" top="495" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="3" dstpinname="Quit VVVV">
+   </LINK>
+   <NODE id="6" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="ForceKill">
+   </PIN>
+   <BOUNDS type="Box" left="4215" top="495" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4215" top="495" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="7845" top="7365" width="11775" height="10365">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="7">
+   <BOUNDS type="Node" left="11880" top="8970" width="2640" height="900">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11880" top="8970" width="2925" height="300">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Placeholders for extra modules e.g.:&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="8">
+   <BOUNDS type="Box" left="825" top="495" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="825" top="495" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="2018.03.30-16.03.07">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Time">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (String Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="R (String Advanced)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="1755" top="1950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Shutdown/Time">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1755" top="1950">
+   </BOUNDS>
+   <PIN pinname="Default" visible="1" slicecount="1" values="--:--:--">
+   </PIN>
+   </NODE>
+   <NODE systemname="Separate (String Legacy)" nodename="Separate (String)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="825" top="945" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="Minus">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="840" top="1365" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="14" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="840" top="1950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" values=".">
+   </PIN>
+   <PIN pinname="To" slicecount="1" values=":">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="840" top="2835" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Clean (String)" nodename="Clean (String)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="840" top="2415" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="11" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="12" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Clean (String)" nodename="Clean (String)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="1755" top="2415" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Output" dstnodeid="10" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="12" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="15" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="0" dstpinname="Input 2" linkstyle="VHV">
+   <LINKPOINT x="895" y="3180">
+   </LINKPOINT>
+   <LINKPOINT x="2645" y="3240">
+   </LINKPOINT>
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE systemname="Shutdown (Windows)" nodename="Shutdown (Windows)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="5820" top="3780" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Harshness to other Apps" slicecount="1" values="Force">
+   </PIN>
+   <PIN pinname="Action" slicecount="1" values="ShutDown">
+   </PIN>
+   <PIN pinname="Do it" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="OnQuit (VVVV)" nodename="OnQuit (VVVV)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="6510" top="2265" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="7635" top="1080" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Global-DEBUG">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="22">
+   <BOUNDS type="Node" left="6510" top="2910" width="2265" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Bang" dstnodeid="22" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="7620" top="2235" width="450" height="270">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="22" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="25" dstpinname="Do it">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="7905" top="1425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Global-DEVMODE">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="7620" top="1815" width="360" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Input Value" dstnodeid="19" dstpinname="Input 1" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Input Value" dstnodeid="19" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="21" dstpinname="Input">
+   </LINK>
+   <NODE systemname="R (Value Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="R (Value Advanced)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="8715" top="2445" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Shutdown/OnQuit">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="8715" top="2445">
+   </BOUNDS>
+   <PIN pinname="Default" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="22" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="4230" top="1410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output" dstnodeid="2" dstpinname="Do Execute">
+   </LINK>
+   <NODE systemname="R (Value Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="R (Value Advanced)" componentmode="Hidden" id="27">
+   <BOUNDS type="Node" left="4635" top="960" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Shutdown/Corners-Kill">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="4635" top="960">
+   </BOUNDS>
+   <PIN pinname="Default" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="26" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="R (Value Advanced)" nodename="R (Value Advanced)" componentmode="Hidden" id="4" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll">
+   <BOUNDS type="Node" left="2835" top="2895" width="1245" height="270">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Shortcut-QUIT">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="0" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="ShellExecute (Windows)" nodename="ShellExecute (Windows)" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="4320" top="3780" width="1425" height="270">
+   </BOUNDS>
+   <PIN pinname="File" visible="1" slicecount="1" values="explorer.exe">
+   </PIN>
+   <PIN pinname="Do Execute" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="30">
+   <BOUNDS type="Node" left="5685" top="2910" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="5685" top="1635" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Input Value" dstnodeid="31" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Bang" dstnodeid="30" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="30" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Output" dstnodeid="28" dstpinname="Do Execute">
+   </LINK>
+   <NODE systemname="SystemFolder (File)" nodename="SystemFolder (File)" componentmode="Hidden" id="32">
+   <BOUNDS type="Node" left="4320" top="2925" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Folder" slicecount="1" values="Windows">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="MakePath (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="MakePath (String)" componentmode="Hidden" id="33">
+   <BOUNDS type="Node" left="4320" top="3360" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="explorer.exe">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="4320" top="3360">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="33" dstpinname="Input 1" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Output" dstnodeid="28" dstpinname="File">
+   </LINK>
+   </PATCH>

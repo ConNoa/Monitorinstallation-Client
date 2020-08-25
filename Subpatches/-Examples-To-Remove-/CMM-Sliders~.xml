@@ -1,0 +1,99 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\CMM-Sliders.v4p" systemname="CMM-Sliders" filename="D:\_IR\_Template_2016\APP\Subpatches\CMM-Sliders.v4p">
+   <NODE systemname="Assets (EX9.Texture Source)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Source\Assets\Assets (EX9.Texture Source).v4p" nodename="Assets (EX9.Texture Source)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="915" top="3015" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filenames" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="900" top="2655" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname=".. To [" slicecount="1" values="15">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1920" top="4560" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="CMM-ScrollGallery-Filenames">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Filenames" dstnodeid="2" dstpinname="Input Value">
+   </LINK>
+   <BOUNDS type="Window" left="13800" top="7275" width="8715" height="8340">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="5390" top="2250" width="450" height="270">
+   </BOUNDS>
+   <PIN pinname=".. To [" visible="1" slicecount="1" values="999">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="FormatValue (String)" nodename="FormatValue (String)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="5390" top="2700" width="960" height="270">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Characters before Comma" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Leading Zeroes" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="8" dstpinname="Input">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="5355" top="3640" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="CMM-ScrollTable-FakeData">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="7" dstpinname="Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="12">
+   <BOUNDS type="Box" left="600" top="345" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="600" top="345" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Section">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Dir (File)" nodename="Dir (File)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="2400" top="3165" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="SubDir (File)" nodename="SubDir (File)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="2400" top="2535" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="CMM-Sliders-TextTags" filename="CMM-Sliders-TextTags.v4p" nodename="CMM-Sliders-TextTags.v4p" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="590" top="945" width="3870" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="45" width="3955" height="5110">
+   </BOUNDS>
+   <BOUNDS type="Window" left="17745" top="4455" width="12480" height="11085">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Output Node" dstnodeid="17" dstpinname="Input Node">
+   </LINK>
+   </PATCH>

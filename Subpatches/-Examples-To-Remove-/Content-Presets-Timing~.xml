@@ -1,0 +1,61 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\Content-Presets-Timing.v4p" systemname="Content-Presets-Timing" filename="D:\_IR\_Template_2016\APP\Subpatches\Content-Presets-Timing.v4p" scrollx="45" scrolly="60">
+   <NODE id="14" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <BOUNDS type="Box" left="1230" top="3495" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1230" top="3495" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="5820" top="5160" width="7140" height="7395">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="1245" top="2880" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1245" top="2880" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="29" srcpinname="Layer Out" dstnodeid="14" dstpinname="Input Node" linkstyle="PolyLine">
+   </LINK>
+   <NODE systemname="Content-Presets-Timing-Pause" filename="Content-Presets-Timing-Pause.v4p" nodename="Content-Presets-Timing-Pause.v4p" componentmode="InAWindow" id="101">
+   <BOUNDS type="Node" left="1394" top="1659" width="2700" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="480" top="765" width="12925" height="11245">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14835" top="4110" width="15735" height="12885">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-Presets-Timing-NoPause" filename="Content-Presets-Timing-NoPause.v4p" nodename="Content-Presets-Timing-NoPause.v4p" componentmode="Hidden" id="103">
+   <BOUNDS type="Node" left="1588" top="2277" width="2880" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="855" top="510" width="12525" height="10270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="12525" height="10270">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="101" srcpinname="Layer Out" dstnodeid="29" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="103" srcpinname="Layer Out" dstnodeid="29" dstpinname="Layer 2">
+   </LINK>
+   </PATCH>

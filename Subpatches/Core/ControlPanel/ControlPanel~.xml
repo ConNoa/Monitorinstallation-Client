@@ -1,0 +1,365 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\Core\ControlPanel\ControlPanel.v4p" bgcolor="15066597" locked="0" scrollx="0" scrolly="-360">
+   <BOUNDS height="8895" left="6540" top="3420" type="Window" width="9720">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="R (String Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="R (String Advanced)" componentmode="Hidden" id="583">
+   <BOUNDS type="Node" left="525" top="3735" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Settings/Title">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="525" top="3735">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="IR">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="596" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1605" top="1605" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1605" top="1605" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="ForceQuit">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="601" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2700" top="1605" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2700" top="1605" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="ForceKill">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="ShortCuts" filename="ShortCuts.v4p" nodename="ShortCuts.v4p" componentmode="Hidden" id="382">
+   <BOUNDS type="Node" left="780" top="4830" width="3825" height="270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13965" top="2790" width="13830" height="13965">
+   </BOUNDS>
+   <PIN pinname="ForceKill" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="780" top="4830">
+   </BOUNDS>
+   <PIN pinname="ForceQuit" visible="1">
+   </PIN>
+   <PIN pinname="Fullscreen" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="FullscreenBang" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="634" systemname="IOBox (String)" hiddenwhenlocked="0">
+   <BOUNDS type="Box" left="2100" top="6330" width="1755" height="780">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2100" top="6330" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="192.168.1.1">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="IP">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="IP">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="192.168.0.3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <NODE systemname="settings-server" filename="local-server\settings-server.v4p" nodename="local-server\settings-server.v4p" componentmode="Hidden" id="611">
+   <BOUNDS type="Node" left="780" top="4245" width="4695" height="270">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1" slicecount="1" values="..\..\..\config.ini">
+   </PIN>
+   <PIN pinname="Refresh" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Values names" visible="1">
+   </PIN>
+   <PIN pinname="Strings names" visible="1">
+   </PIN>
+   <PIN pinname="Colors Names" visible="1">
+   </PIN>
+   <PIN pinname="State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="AppName" visible="1" slicecount="1" values="IVAN-RASTER-2017">
+   </PIN>
+   <PIN pinname="QuitBang" visible="1">
+   </PIN>
+   <PIN pinname="FullscreenBang" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="8925" top="2085" width="26325" height="16380">
+   </BOUNDS>
+   <PIN pinname="Evaluate" slicecount="1" visible="1" pintype="Input" values="1">
+   </PIN>
+   <PIN pinname="Values " visible="1">
+   </PIN>
+   <PIN pinname="Strings" visible="1">
+   </PIN>
+   <PIN pinname="Colors" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="611" srcpinname="FullscreenBang" dstnodeid="382" dstpinname="Fullscreen">
+   </LINK>
+   <LINK srcnodeid="611" srcpinname="FullscreenBang" dstnodeid="382" dstpinname="FullscreenBang">
+   </LINK>
+   <LINK srcnodeid="583" srcpinname="Output" dstnodeid="611" dstpinname="AppName">
+   </LINK>
+   <NODE systemname="ControlPanel-Quit" filename="ControlPanel-Quit.v4p" nodename="ControlPanel-Quit.v4p" componentmode="Hidden" id="652">
+   <BOUNDS type="Node" left="510" top="2340" width="2265" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="510" top="2340" width="4635" height="4465">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7845" top="7365" width="11775" height="7050">
+   </BOUNDS>
+   <PIN pinname="Time" visible="1" slicecount="1" values="2018.03.30-16.11.34">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="596" srcpinname="Y Output Value" dstnodeid="652" dstpinname="ForceQuit">
+   </LINK>
+   <LINK srcnodeid="601" srcpinname="Y Output Value" dstnodeid="652" dstpinname="ForceKill">
+   </LINK>
+   <NODE systemname="ControlPanel-About" filename="ControlPanel-About.v4p" nodename="ControlPanel-About.v4p" componentmode="Hidden" id="653">
+   <BOUNDS type="Node" left="525" top="5745" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="525" top="5745" width="4965" height="4045">
+   </BOUNDS>
+   <BOUNDS type="Window" left="15075" top="5895" width="10020" height="8385">
+   </BOUNDS>
+   <PIN pinname="IP" visible="1">
+   </PIN>
+   <PIN pinname="Application Title" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Write" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="653" srcpinname="IP" dstnodeid="634" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="583" srcpinname="Output" dstnodeid="653" dstpinname="Application Title" hiddenwhenlocked="0">
+   </LINK>
+   <NODE systemname="ControlPanel-MainLoop" filename="ControlPanel-MainLoop.v4p" nodename="ControlPanel-MainLoop.v4p" componentmode="Hidden" id="667">
+   <BOUNDS type="Node" left="510" top="930" width="2400" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="510" top="930" width="6805" height="4305">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4140" top="7125" width="16710" height="5235">
+   </BOUNDS>
+   <PIN pinname="Global-Time" visible="1">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE systemname="server-evaluate" filename="local-server\server-evaluate.v4p" nodename="local-server\server-evaluate.v4p" componentmode="Hidden" id="671">
+   <BOUNDS type="Node" left="5420" top="3757" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2873" top="1560" width="5095" height="4395">
+   </BOUNDS>
+   <BOUNDS type="Window" left="18900" top="10020" width="6165" height="5355">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="671" srcpinname="Output" dstnodeid="611" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="667" srcpinname="Global-Time" dstnodeid="652" dstpinname="Time">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="673">
+   <BOUNDS type="Box" left="540" top="6300" width="1410" height="285">
+   </BOUNDS>
+   <BOUNDS type="Node" left="540" top="6300" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Multiline">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="653" srcpinname="Version" dstnodeid="673" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="674">
+   <BOUNDS type="Node" left="450" top="210" width="2355" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="450" top="210" width="3825" height="525">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Typically, you do not want to change this modules, but of course you can.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="7">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="676" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="6450" top="765" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="1965" left="6450" top="765" type="Box" width="2430">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="6">
+   </PIN>
+   <PIN encoded="0" pinname="Input String" slicecount="6" visible="1" values="|Toggle Fullscreen|,|Open settings server|,|Toggle Debug Info |,|Reset bang|,|Force update bang|,|Quit the (Not save)|">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="675" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="5475" top="750" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="2010" left="5475" top="750" type="Box" width="900">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="6">
+   </PIN>
+   <PIN encoded="0" pinname="Input String" slicecount="6" visible="1" values="F8,F9,F10,F12,|F12 (Hold)|,|ESC (Hold)|">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="677">
+   <BOUNDS type="Node" left="5400" top="300" width="2355" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5400" top="300" width="2355" height="345">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|List of shortcuts|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="7">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="678">
+   <BOUNDS type="Box" left="3855" top="1605" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3855" top="1605" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Write version.info|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="678" srcpinname="Y Output Value" dstnodeid="653" dstpinname="Write version.info" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="3855" y="3920">
+   </LINKPOINT>
+   <LINKPOINT x="2115" y="3910">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="679">
+   <BOUNDS type="Node" left="5760" top="4110" width="3480" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5760" top="4110" width="2130" height="585">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Make sure server is evaluated and open the link|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="680">
+   <BOUNDS type="Node" left="5760" top="4725" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5760" top="4725" width="2250" height="315">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="URL">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="http://localhost:8080">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="681">
+   <BOUNDS type="Node" left="5760" top="5145" width="4095" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5760" top="5145" width="2985" height="750">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Use R (Value Advanced) or R (String Adanced) to get data nny using&cr;&lf;Group/Parameter naming for R node|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="R (Value Advanced)" componentmode="Hidden" id="682">
+   <BOUNDS type="Node" left="5760" top="6030" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Settings/Mouse">
+   </PIN>
+   <BOUNDS type="Box" left="5760" top="6030">
+   </BOUNDS>
+   </NODE>
+   </PATCH>

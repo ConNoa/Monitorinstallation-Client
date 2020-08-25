@@ -1,0 +1,75 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\Utils\TouchModule\TouchPlugin.v4p" systemname="TouchPlugin" filename="D:\_IR\_Template_2016\APP\Subpatches\Utils\TouchModule\TouchPlugin.v4p">
+   <NODE systemname="TouchState (System Join)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="TouchState (System Join)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1500" top="2055" width="885" height="270">
+   </BOUNDS>
+   <PIN pinname="Id" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Is New" visible="1">
+   </PIN>
+   <PIN pinname="Touch Data" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="2055">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="WindowsTouch (Windows 1.01)" filename="plugins\WinTouch.dll" nodename="WindowsTouch (Windows 1.01)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1515" top="1500" width="1290" height="270">
+   </BOUNDS>
+   <PIN pinname="Handle" visible="1" slicecount="1" values="1050400">
+   </PIN>
+   <PIN pinname="Enable" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Id" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Is New" visible="1">
+   </PIN>
+   <PIN pinname="Released IDs" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Id" dstnodeid="0" dstpinname="Id">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="PositionXY" dstnodeid="0" dstpinname="PositionXY">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Is New" dstnodeid="0" dstpinname="Is New">
+   </LINK>
+   <NODE id="2" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Touch Data|">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="2825" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="2825" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Touch Data" dstnodeid="2" dstpinname="Input Node">
+   </LINK>
+   <NODE id="3" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Handle">
+   </PIN>
+   <BOUNDS type="Box" left="1515" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1515" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Handle">
+   </LINK>
+   <NODE id="4" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Released IDs|">
+   </PIN>
+   <BOUNDS type="Box" left="2400" top="2825" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2400" top="2825" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Released IDs" dstnodeid="4" dstpinname="Y Input Value">
+   </LINK>
+   <BOUNDS type="Window" left="-1" top="-1" width="4305" height="3825">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   </PATCH>

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="Iyvb2Nwi6QrP6BggGBoTuR" LanguageVersion="2020.1.6.170" Version="0.128" IsTrusted="true">
+  <NugetDependency Id="FnTxPott84mN5ANRS3MQKU" Location="VL.CoreLib" Version="2020.1.6" />
+  <Patch Id="CVVsM80jHjLQLjU1loXBFf">
+    <Canvas Id="QMrWzcUL9qHMKHsrIes3mu" DefaultCategory="Main" CanvasType="FullCategory">
+      <!--
+
+    ************************ LayerViewer ************************
+
+-->
+      <Node Name="LayerViewer" Bounds="353,292" Id="KOJp11BLdlLMZY6nOIrvCL">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:Interfaces>
+          <TypeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
+            <Choice Kind="MutableInterfaceType" Name="IValueViewer" />
+          </TypeReference>
+        </p:Interfaces>
+        <Patch Id="FiCohuX1v2rQUeZnuGsZBT">
+          <Canvas Id="UlqxULTySqTLQRY87mKsiK" CanvasType="Group">
+            <ControlPoint Id="SVKWC2P6mPuQFS91BYxWlp" Bounds="487,855" />
+            <ControlPoint Id="QR7oeVTg5aOQUrnpKTWDUH" Bounds="508,1000" />
+            <Node Bounds="588,850,145,19" Id="I4huel371QULuYTIjwlL8t">
+              <p:NodeReference LastCategoryFullName="HDE.Viewers" LastSymbolSource="HDE.WidgetsAndViewers.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="TooltipPaint" />
+              </p:NodeReference>
+              <Pin Id="INTd2sLq2fSPTxURFEa8WB" Name="Output" Kind="OutputPin" />
+              <Pin Id="TVmSUeYwAY7OIX6V9ZIPXI" Name="Background" Kind="OutputPin" />
+              <Pin Id="JcS3oHO7FzwLxwbEe9nJOy" Name="Hint" Kind="OutputPin" />
+              <Pin Id="Va1hPpFzgIBOgKX8Htjvw4" Name="Warning" Kind="OutputPin" />
+              <Pin Id="GRQx0LfQvpKN1Lxzw6lheE" Name="Error" Kind="OutputPin" />
+              <Pin Id="UvWAFTBjSdgLQvz4K16nmf" Name="Runtime Error" Kind="OutputPin" />
+              <Pin Id="VlHZqL5LaESNdn0j21LEZf" Name="Font1" Kind="OutputPin" />
+              <Pin Id="InGXuzHuZRpNnpXJPDjUeM" Name="Font2" Kind="OutputPin" />
+              <Pin Id="SD33xy6kTxiPgAv8EeLbbS" Name="Font3" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="508,926,68,19" Id="VUnuve3LVgYLcdpuMAncWw">
+              <p:NodeReference LastCategoryFullName="HDE.Widgets" LastSymbolSource="HDE.WidgetsAndViewers.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="TextWidget (SingleLine)" />
+              </p:NodeReference>
+              <Pin Id="Pf9wp1WbzqoL11Y5jpE8px" Name="Value" Kind="InputPin" DefaultValue="Skia Layer">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="String" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="UFahNsvSz5IN5hPn5LHnVG" Name="Paint" Kind="InputPin" />
+              <Pin Id="FOpH0eR2h4UO7huBe8NzQv" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="506,960,76,19" Id="IKl1o3Qelg9N6EurUHGvw3">
+              <p:NodeReference LastCategoryFullName="HDE.Widgets" LastSymbolSource="HDE.WidgetsAndViewers.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="EmptyWidget" />
+              </p:NodeReference>
+              <Pin Id="L4w6YEDPwNqQMunhSJ6YC8" Name="Default Size" Kind="InputPin" />
+              <Pin Id="Srvzsj5niFNOnV4hhzLGQZ" Name="Output" Kind="StateOutputPin" />
+            </Node>
+          </Canvas>
+          <Patch Id="B4szOu8FOVeLc7BnAfC0TL" Name="Create" />
+          <Patch Id="FX8XexodKsFMk4us9wD4T4" Name="Update">
+            <Pin Id="S6EKco0pxStNx1MnKSuogr" Name="Value" Kind="InputPin">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="Layer" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="C0VH2FEJ02FPMYDoQuzM2v" Name="Context" Kind="InputPin" />
+            <Pin Id="DDlbqR27C1HLi1ETvtLXMG" Name="Widget" Kind="OutputPin" />
+          </Patch>
+          <ProcessDefinition Id="TiO7DCC8uaJPBFSV5i7DE9">
+            <Fragment Id="RA9fogb6vuMPKY9IfY1Bl8" Patch="B4szOu8FOVeLc7BnAfC0TL" Enabled="true" />
+            <Fragment Id="Id9L5JVKVBRLaU1QiGJtj7" Patch="FX8XexodKsFMk4us9wD4T4" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="H2atE09x36UO8imEBw9tY1" Ids="S6EKco0pxStNx1MnKSuogr,SVKWC2P6mPuQFS91BYxWlp" IsHidden="true" />
+          <Link Id="Nb5XramiafJMBGXqLY3apZ" Ids="QR7oeVTg5aOQUrnpKTWDUH,DDlbqR27C1HLi1ETvtLXMG" IsHidden="true" />
+          <Link Id="Ty4Do8mDgSdPF3VDNmZEo4" Ids="VlHZqL5LaESNdn0j21LEZf,UFahNsvSz5IN5hPn5LHnVG" />
+          <Link Id="RfUbkH9Gy6uNqJYBdN4Hqm" Ids="Srvzsj5niFNOnV4hhzLGQZ,QR7oeVTg5aOQUrnpKTWDUH" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ RegisterServices ************************
+
+-->
+      <Node Name="RegisterServices" Bounds="358,370,192,157" Id="VWkX6pOR12uOCDQEMXJjhJ">
+        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <Choice Kind="OperationDefinition" Name="Operation" />
+        </p:NodeReference>
+        <Patch Id="FiLZLhhFv78LinIp8WupLA">
+          <Node Bounds="442,414,96,93" Id="MGQvVrWZPx7L0mlWXJKyyl">
+            <p:NodeReference LastCategoryFullName="HDE.Viewers" LastSymbolSource="HDE.WidgetsAndViewers.vl">
+              <Choice Kind="OperationCallFlag" Name="RegisterViewer" />
+              <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+            </p:NodeReference>
+            <Pin Id="CIp1uOM9XwwLhllBWGpSgR" Name="Input" Kind="InputPin" />
+            <Pin Id="FSgvpqOQXAHM2huwjdnxfX" Name="Output" Kind="OutputPin" />
+            <Patch Id="E94Fm70NvlcLE7JJOn6oLY" Name="Create" ManuallySortedPins="true">
+              <Pin Id="HkYrFVj6CoTLJsrQeD7llM" Name="Result" Kind="OutputPin" />
+              <ControlPoint Id="N9kfZVZPPYBNP9eGDS3Eht" Bounds="454,500" />
+              <Node Bounds="454,437,72,26" Id="V55HPCHJqexLL7rS9wnVuA">
+                <p:NodeReference LastCategoryFullName="Main.CVImageViewer" LastSymbolSource="HDE.OpenCV.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="Create" />
+                  <CategoryReference Kind="Category" Name="LayerViewer" />
+                </p:NodeReference>
+                <Pin Id="NKvG5QniWRzN9KEzBjTX51" Name="Output" Kind="StateOutputPin" />
+              </Node>
+            </Patch>
+          </Node>
+          <Link Id="A0g7DSO1AtiMJpu0i38f9I" Ids="N9kfZVZPPYBNP9eGDS3Eht,HkYrFVj6CoTLJsrQeD7llM" IsHidden="true" />
+          <ControlPoint Id="THNlVncpNDHOdew8vT0Tj3" Bounds="445,388" />
+          <Link Id="Pb9m8j7yzb2OfPlohQyAK8" Ids="VDjLY3ghNzpObnxY9XFz73,THNlVncpNDHOdew8vT0Tj3" IsHidden="true" />
+          <Pin Id="VDjLY3ghNzpObnxY9XFz73" Name="Factory" Kind="InputPin" />
+          <Link Id="UMq8s9ZzpmaLy3ytMAtklt" Ids="THNlVncpNDHOdew8vT0Tj3,CIp1uOM9XwwLhllBWGpSgR" />
+          <Link Id="IeWeOxG5BFWNhGieWdorAU" Ids="NKvG5QniWRzN9KEzBjTX51,N9kfZVZPPYBNP9eGDS3Eht" />
+        </Patch>
+      </Node>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="DR84RW3gPdcNQRVhNbrzeo">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="QMcUX8GxtaqPCc54xUx9s2">
+        <Canvas Id="CE7o2yhx3TLLIiyk0TG9oM" CanvasType="Group" />
+        <Patch Id="GHvb7l39s3eN7r78jlDAGA" Name="Create" />
+        <Patch Id="ET3ZUvmEZY0QXIY70WyUVP" Name="Update" />
+        <ProcessDefinition Id="CMECGrSVGKmNkVnMowtda7">
+          <Fragment Id="FApQqsztcpbPHiYJdVRMBZ" Patch="GHvb7l39s3eN7r78jlDAGA" Enabled="true" />
+          <Fragment Id="RF5Zzw3eOBVLAA9AkGHBjE" Patch="ET3ZUvmEZY0QXIY70WyUVP" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="IInBzgf3QSsPEovqwxCxxI" Location="VL.Skia" Version="2020.1.6" />
+  <NugetDependency Id="BIq8vDA3GrhQFWOlh1dWzp" Location="VL.HDE" Version="2020.1.6" />
+</Document>

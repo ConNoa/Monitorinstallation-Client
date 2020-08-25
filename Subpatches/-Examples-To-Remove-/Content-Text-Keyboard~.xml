@@ -1,0 +1,199 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\Content-Text-Keyboard.v4p" systemname="Content-Text-Keyboard" filename="D:\_IR\_Template_2016\APP\Subpatches\Content-Text-Keyboard.v4p" scrollx="0" scrolly="-360">
+   <NODE id="1" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <BOUNDS type="Box" left="1185" top="8190" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1185" top="8190" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="11595" top="5175" width="11730" height="11160">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1155" top="7605" width="5610" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1155" top="7605" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="8235" top="4860" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="State-Presets-Keyboard">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="4575" top="2085" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Transition-Presets-Keyboard">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="7065" top="3600" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Reset-Presets">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-Text-Keyboard-LayoutExample" filename="Content-Text-Keyboard-LayoutExample.v4p" nodename="Content-Text-Keyboard-LayoutExample.v4p" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="1915" top="7003" width="2790" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1380" top="4058" width="7480" height="5890">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13410" top="3870" width="8880" height="13200">
+   </BOUNDS>
+   <PIN pinname="String" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Input Value" dstnodeid="20" dstpinname="Alpha" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="5385" top="3480" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="MapTransition (Animation)" filename="Utils\MapTransition (Animation).v4p" nodename="MapTransition (Animation)" componentmode="Hidden" id="22">
+   <BOUNDS type="Node" left="5835" top="3075" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Distance" slicecount="1" values="-0.1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="21" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Input Value" dstnodeid="22" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="_Keyboard_" filename="..\Utils\Keyboard\_Keyboard_.v4p" nodename="..\Utils\Keyboard\_Keyboard_.v4p" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="5370" top="6495" width="2910" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="1 pixel" visible="1" slicecount="2" values="0.00104166666666667,0.00185185185185185">
+   </PIN>
+   <BOUNDS type="Window" left="11985" top="5460" width="16935" height="20175">
+   </BOUNDS>
+   <PIN pinname="String Original" visible="1">
+   </PIN>
+   <PIN pinname="SetCaret" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="CaretPosition" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   <PIN pinname="Initialize" visible="1">
+   </PIN>
+   <PIN pinname="String Cleaned" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Input Value" dstnodeid="0" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Input Value" dstnodeid="0" dstpinname="Alpha" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Input Value" dstnodeid="0" dstpinname="Initialize">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="String Original" dstnodeid="20" dstpinname="String" linkstyle="VHV" hiddenwhenlocked="0">
+   <LINKPOINT x="7360" y="6885">
+   </LINKPOINT>
+   <LINKPOINT x="1895" y="6855">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Transform Out" dstnodeid="0" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="TextField-Scrolable" filename="..\Utils\Scrolling-TextField\TextField-Scrolable.v4p" nodename="..\Utils\Scrolling-TextField\TextField-Scrolable.v4p" componentmode="InAWindow" id="5">
+   <BOUNDS type="Node" left="3375" top="5100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="12450" top="6900" width="15690" height="18105">
+   </BOUNDS>
+   <PIN pinname="SetCaret" visible="1">
+   </PIN>
+   <PIN pinname="CaretPosition" visible="1">
+   </PIN>
+   <PIN pinname="1pixel" visible="1" slicecount="2" values="0.00104166666666667,0.00185185185185185">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Input Value" dstnodeid="5" dstpinname="Enable">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Input Value" dstnodeid="5" dstpinname="Alpha" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Input Value" dstnodeid="5" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Layer Out" dstnodeid="2" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="SetCaret" dstnodeid="0" dstpinname="SetCaret">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="CaretPosition" dstnodeid="0" dstpinname="CaretPosition">
+   </LINK>
+   <NODE systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="2625" top="4305" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="MapTransition (Animation)" filename="..\Utils\MapTransition (Animation).v4p" nodename="MapTransition (Animation)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="3075" top="3810" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Distance" slicecount="1" values="-0.25">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Output" dstnodeid="25" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Transform Out" dstnodeid="5" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Input Value" dstnodeid="24" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   </PATCH>

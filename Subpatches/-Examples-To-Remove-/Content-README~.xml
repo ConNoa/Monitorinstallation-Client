@@ -1,0 +1,293 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\Content-README.v4p" systemname="Content-README" filename="D:\_IR\_Template_2016\APP\Subpatches\Content-README.v4p">
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="915" top="2160" width="2115" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="915" top="2160" width="4650" height="675">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Find ready to use assets in the &cr;&lf;..\Assets\Default\Buttons\|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="11">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="1">
+   <BOUNDS type="Node" left="6480" top="2250" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6480" top="2250" width="3420" height="510">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="..\Assets\Default\Buttons">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="945" top="3435" width="2115" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="945" top="3435" width="4560" height="720">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Store your original asstes in the ..\Assets\ folder|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="11">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="3">
+   <BOUNDS type="Node" left="6480" top="3435" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6480" top="3435" width="3420" height="510">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="..\Assets">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE id="4" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="945" top="4515" width="1155" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="945" top="4515" width="4575" height="1140">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Store your media files and content sturcture at the ..\Content\ folder|">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="5">
+   <BOUNDS type="Node" left="6480" top="4575" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6480" top="4575" width="3420" height="510">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="..\Content">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE id="6" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="1005" top="8850" width="2115" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1005" top="8850" width="8865" height="645">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Если любой из представленных здесь модулей не используется в текущем проекте, &cr;&lf;УДАЛИТЕ ЕГО - сначал из патча, а затем из папки \Subpatches\|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE id="7" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="1035" top="6105" width="2115" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1035" top="6105" width="10725" height="1155">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|При добавлении в проект любого другого модуля или контрибуции: &cr;&lf;1. СНАЧАЛА СКОПИРУЙТЕ файлы модуля в папку проекта, например \Subpatches\MyModule1\ &cr;&lf;2. Добавьте модуль в патч строго из скопированной папки, например \Subpatches\MyModule1\ |">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="8" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="855" top="495" width="2115" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="855" top="495" width="11550" height="1185">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Располагайте здесь модули, составляющие смысловую информацию приложения.  &cr;&lf;&cr;&lf;Группируйте модули по разным типам, например: Content-Menu, Content-Game, Content-Catalog.&cr;&lf;Никогда созданайте отдельные модули для контента одного типа (Content-Catalog-1, Content-Catalog-2).&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="9" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="1260" top="9765" width="5295" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1260" top="9765" width="9090" height="570">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|При работе над приложением удалите эти комментарии.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="10" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="900" top="9660" width="5295" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="900" top="9660" width="285" height="780">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="!">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="25">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="11">
+   <BOUNDS type="Node" left="6480" top="5190" width="2265" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6480" top="5190" width="4860" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Content folder must NOT BE in the project repository (.gitignore)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="12">
+   <BOUNDS type="Node" left="6480" top="3930" width="2265" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6480" top="3930" width="3990" height="330">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Assets folder must BE in the project repository (.git)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="13">
+   <BOUNDS type="Node" left="6495" top="2790" width="2010" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6495" top="2790" width="3180" height="375">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="https://material.io/icons/">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Url">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="14">
+   <BOUNDS type="Node" left="930" top="2805" width="1965" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="930" top="2805" width="4635" height="345">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Assets selected from Google Material Icons|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="15">
+   <BOUNDS type="Node" left="6600" top="7350" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6600" top="7350" width="3420" height="510">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="..\Subpatches">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE id="16" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="1065" top="7350" width="1155" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1065" top="7350" width="4725" height="885">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|BEFORE use in the project, FIRST copy any module into \Subpatches\ folder! &cr;&lf;|">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="17">
+   <BOUNDS type="Node" left="6600" top="7875" width="2265" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6600" top="7875" width="4860" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|This is where all of the project code and modules MUST BE.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="15945" top="3945" width="12495" height="13905">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   </PATCH>

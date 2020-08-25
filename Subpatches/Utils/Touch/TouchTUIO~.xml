@@ -1,0 +1,169 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\Utils\TouchModule\TouchTUIO.v4p" systemname="TouchTUIO" filename="D:\_IR\_Template_2016\APP\Subpatches\Utils\TouchModule\TouchTUIO.v4p">
+   <NODE systemname="UDP (Network Server)" nodename="UDP (Network Server)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="3135" top="2355" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Local Port" visible="1">
+   </PIN>
+   <PIN pinname="Queue Mode" slicecount="1" visible="1" values="Concatenate">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3975" top="3990" width="1020" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3975" top="3990" width="1020" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; Session ID|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="TUIOCursor (Network Split)" componentmode="Hidden" id="4" systemname="TUIOCursor (Network Split)" filename="%VVVV%\lib\packs\VL.IO.TUIO.0.79.17-g63a3d4ba77\vvvv\nodes\vl\VVVV.Network.TUIO.vl">
+   <BOUNDS type="Node" left="3135" top="3360" width="3765" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3135" top="3360" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Bytes" visible="1">
+   </PIN>
+   <PIN pinname="Session ID" visible="1">
+   </PIN>
+   <PIN pinname="Object ID" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Angle" visible="1">
+   </PIN>
+   <PIN pinname="VelocityXY" visible="1">
+   </PIN>
+   <PIN pinname="Angle Velocity" visible="1">
+   </PIN>
+   <PIN pinname="Acceleration" visible="1">
+   </PIN>
+   <PIN pinname="Angle Acceleration" visible="1">
+   </PIN>
+   <PIN pinname="Cursor ID" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2700" top="1410" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2700" top="1410" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enable">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="4" dstpinname="Bytes">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enable">
+   </LINK>
+   <NODE id="9" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Local Port|">
+   </PIN>
+   <BOUNDS type="Box" left="3315" top="1235" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="1235" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="3333">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Local Port">
+   </LINK>
+   <NODE id="10" systemname="IOBox (Enumerations)" componentmode="InABox" nodename="IOBox (Enumerations)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Queue Mode|">
+   </PIN>
+   <BOUNDS type="Box" left="3795" top="1835" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3795" top="1835" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Output Enum" dstnodeid="0" dstpinname="Queue Mode">
+   </LINK>
+   <BOUNDS type="Window" left="16365" top="3750" width="14580" height="13785">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <INFO author="" description="" tags="">
+   </INFO>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="28" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6045" top="10200" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6045" top="10200" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Released">
+   </PIN>
+   </NODE>
+   <NODE systemname="TouchState (System Join)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="TouchState (System Join)" componentmode="Hidden" id="45">
+   <BOUNDS type="Node" left="3375" top="10155" width="885" height="270">
+   </BOUNDS>
+   <PIN pinname="Id" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="Is New" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Touch Data" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="3375" top="10155">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="44" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="3375" top="10695" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3375" top="10695" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Touch Data|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="45" srcpinname="Touch Data" dstnodeid="44" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="IDs-New-Released" filename="IDs-New-Released.v4p" nodename="IDs-New-Released.v4p" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="4575" top="9435" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Touch Id" visible="1">
+   </PIN>
+   <PIN pinname="Is new" visible="1">
+   </PIN>
+   <PIN pinname="Position XY" visible="1">
+   </PIN>
+   <PIN pinname="Released" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Released" dstnodeid="28" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Is new" dstnodeid="45" dstpinname="Is New">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Session ID" dstnodeid="45" dstpinname="Id">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Session ID" dstnodeid="26" dstpinname="Touch Id">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="PositionXY" dstnodeid="45" dstpinname="PositionXY">
+   </LINK>
+   </PATCH>

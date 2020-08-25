@@ -1,0 +1,221 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\BG.v4p" systemname="BG" filename="D:\_IR\_Template_2016\APP\Subpatches\BG.v4p">
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1485" top="7530" width="1995" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="1485" top="7530">
+   </BOUNDS>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="6735" top="5010" width="12945" height="10380">
+   </BOUNDS>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="1500" top="8145" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="8145" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1020" top="6840" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Blend">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Render State" dstnodeid="0" dstpinname="Render State">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="16" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="510" top="285" width="2115" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="510" top="285" width="8835" height="1425">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|BG is for background&cr;&lf;&cr;&lf;Place here backgound and /or 3D-scene - same for different states of the app.  |">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="11">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="18" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="480" top="2100" width="2115" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="480" top="2100" width="4890" height="960">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Small images, and simple 3D models put to Assets folder|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="11">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="17">
+   <BOUNDS type="Node" left="5910" top="2100" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5910" top="2100" width="3420" height="510">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="..\Assets">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="30">
+   <BOUNDS type="Node" left="2865" top="6330" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="_Studio_BG">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="32" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="480" top="3210" width="2115" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="480" top="3210" width="4860" height="1080">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Hi-res images, video,  complex 3D models to put into Content folder|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="11">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="31">
+   <BOUNDS type="Node" left="5910" top="3210" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5910" top="3210" width="3420" height="510">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="..\Content">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="33">
+   <BOUNDS type="Node" left="5910" top="3750" width="2265" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5910" top="3750" width="4860" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Content folder MUST NOT be in the project repository (.gitignore)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="34">
+   <BOUNDS type="Node" left="5910" top="2610" width="2265" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5910" top="2610" width="3990" height="330">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Assets folder MUST BE in the project repository (.git)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="36" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="780" top="4785" width="5295" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="780" top="4785" width="9090" height="570">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Delete this comments when create your own app.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="35" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="510" top="4635" width="5295" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="510" top="4635" width="285" height="780">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="!">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="25">
+   </PIN>
+   </NODE>
+   <NODE systemname="BG-Gradient" filename="-Examples-To-Remove-\BG-Gradient.v4p" nodename="-Examples-To-Remove-\BG-Gradient.v4p" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="1815" top="6795" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Color - Color" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1815" top="6795">
+   </BOUNDS>
+   <BOUNDS type="Window" left="8145" top="315" width="6150" height="8670">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="29" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Input Value" dstnodeid="29" dstpinname="Color">
+   </LINK>
+   </PATCH>

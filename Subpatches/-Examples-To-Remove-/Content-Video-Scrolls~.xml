@@ -1,0 +1,129 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\Content-Video-Scrolls.v4p" systemname="Content-Video-Scrolls" filename="D:\_IR\_Template_2016\APP\Subpatches\Content-Video-Scrolls.v4p" scrollx="15" scrolly="15">
+   <NODE id="1" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
+   </PIN>
+   <BOUNDS type="Box" left="375" top="5445" width="1335" height="390">
+   </BOUNDS>
+   <BOUNDS type="Node" left="375" top="5445" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="7800" top="9195" width="5730" height="8415">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="390" top="4875" width="3225" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="390" top="4875" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="2175" top="420" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Transition-Video">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="3345" top="1290" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Video-Idle">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="2925" top="795" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Reset-Video">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GalleryPooled" filename="..\Utils\Scrolling-Gallery\GalleryPooled.v4p" nodename="..\Utils\Scrolling-Gallery\GalleryPooled.v4p" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="1020" top="1920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS type="Window" left="14850" top="2100" width="13980" height="13875">
+   </BOUNDS>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 1" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Input Value" dstnodeid="21" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Input Value" dstnodeid="21" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Input Value" dstnodeid="21" dstpinname="Alpha">
+   </LINK>
+   <NODE systemname="Scroll-Texture" filename="..\Utils\Scrolling-Texture\Scroll-Texture.v4p" nodename="..\Utils\Scrolling-Texture\Scroll-Texture.v4p" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="2322" top="3590" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="930" top="1080" width="9780" height="7340">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9480" top="5280" width="9780" height="9675">
+   </BOUNDS>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Input Value" dstnodeid="19" dstpinname="Alpha">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Input Value" dstnodeid="19" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Input Value" dstnodeid="19" dstpinname="Enable">
+   </LINK>
+   <NODE systemname="Scroll-Table-Y" filename="..\Utils\Scrolling-List-Y\Scroll-Table-Y.v4p" nodename="..\Utils\Scrolling-List-Y\Scroll-Table-Y.v4p" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1650" top="2865" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13425" top="5520" width="15285" height="16305">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer Out" dstnodeid="2" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Input Value" dstnodeid="0" dstpinname="Alpha">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Input Value" dstnodeid="0" dstpinname="Enable">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Input Value" dstnodeid="0" dstpinname="Reset">
+   </LINK>
+   </PATCH>

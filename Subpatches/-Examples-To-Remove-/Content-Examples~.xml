@@ -1,0 +1,143 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\Content-Examples.v4p" systemname="Content-Examples" filename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\Content-Examples.v4p">
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1500" top="5400" width="3480" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="5400">
+   </BOUNDS>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 9" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 8" visible="1">
+   </PIN>
+   <PIN pinname="Layer 7" visible="1">
+   </PIN>
+   <PIN pinname="Layer 6" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-Sliders-Scrolls" filename="Content-Sliders-Scrolls.v4p" nodename="-Examples-To-Remove-\Content-Sliders-Scrolls.v4p" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="4155" top="4305" width="2070" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2605" top="2755" width="3100" height="3100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4980" top="5355" width="16425" height="8415">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-Text-Keyboard" filename="Content-Text-Keyboard.v4p" nodename="-Examples-To-Remove-\Content-Text-Keyboard.v4p" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="3765" top="3780" width="2100" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2215" top="2230" width="3100" height="3100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="11595" top="5175" width="11730" height="11160">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-3D" filename="Content-3D.v4p" nodename="-Examples-To-Remove-\Content-3D.v4p" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="4560" top="4780" width="1785" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2463" top="2405" width="4195" height="4750">
+   </BOUNDS>
+   <BOUNDS type="Window" left="12075" top="4230" width="15150" height="11385">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-Timing" filename="Content-Timing.v4p" nodename="Content-Timing.v4p" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="3390" top="3270" width="1740" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1396" top="964" width="6595" height="7075">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7005" top="11040" width="10260" height="7395">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-1pixel" filename="Content-1pixel.v4p" nodename="Content-1pixel.v4p" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="1860" top="1500" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="173" top="360" width="3565" height="4105">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14010" top="1500" width="13125" height="12195">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-SpreadsAndBins" filename="Content-SpreadsAndBins.v4p" nodename="Content-SpreadsAndBins.v4p" componentmode="Hidden" id="6" stayontop="0">
+   <BOUNDS type="Node" left="3031" top="2821" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1193" top="1005" width="6625" height="5815">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9540" top="1245" width="18390" height="18600">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Content-Touchbutton" filename="Content-Touchbutton.v4p" nodename="-Examples-To-Remove-\Content-Touchbutton.v4p" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="2250" top="1897" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="520" top="0" width="3460" height="4195">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10680" top="480" width="16155" height="8790">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Content-Logic" filename="..\Content-Logic.v4p" nodename="Content-Logic.v4p" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="2620" top="2345" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="60" top="158" width="5230" height="4375">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="5230" height="4375">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Layer Out" dstnodeid="0" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Layer Out" dstnodeid="0" dstpinname="Layer 4">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 5">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 6">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Layer Out" dstnodeid="0" dstpinname="Layer 7">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 8">
+   </LINK>
+   <NODE id="9" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="6170" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="6170" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer Out" dstnodeid="9" dstpinname="Input Node">
+   </LINK>
+   <BOUNDS type="Window" left="7290" top="4815" width="7515" height="7170">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   </PATCH>

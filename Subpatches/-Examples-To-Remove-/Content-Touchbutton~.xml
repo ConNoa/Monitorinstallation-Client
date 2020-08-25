@@ -1,0 +1,195 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\Content-Touchbutton.v4p" systemname="Content-Touchbutton" filename="D:\_IR\_Template_2016\APP\Subpatches\-Examples-To-Remove-\Content-Touchbutton.v4p" scrollx="0" scrolly="-360">
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="720" top="4410" width="7785" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="720" top="4410" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE id="2" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
+   </PIN>
+   <BOUNDS type="Box" left="720" top="5010" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="720" top="5010" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer Out" dstnodeid="2" dstpinname="Input Node">
+   </LINK>
+   <BOUNDS type="Window" left="10680" top="480" width="16155" height="8790">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="7140" top="840" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" slicecount="1" values="TouchData">
+   </PIN>
+   </NODE>
+   <NODE systemname="TouchState (System Split)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="TouchState (System Split)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="7140" top="1350" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7140" top="1350" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Touch Data" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Id" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Input Value" dstnodeid="17" dstpinname="Touch Data">
+   </LINK>
+   <NODE systemname="Content-Touchbutton-Cursor" filename="Content-Touchbutton-Cursor.v4p" nodename="Content-Touchbutton-Cursor.v4p" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="7530" top="3165" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7530" top="3165" width="4585" height="5845">
+   </BOUNDS>
+   <BOUNDS type="Window" left="21330" top="11490" width="6120" height="5835">
+   </BOUNDS>
+   <PIN pinname="Alpha" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="TranslateXY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="21">
+   <BOUNDS type="Node" left="8565" top="840" width="4500" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8565" top="840" width="6645" height="1200">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|R (TouchData) is inside TouchButton &amp; SwipeButton modules already!&cr;&lf;DO NOT CHANGE OR GETSLICE TouchData (!) &cr;&lf;DO NOT CREATE NEW MOUSE / TOUCH NODES anywhere anytime (!)&cr;&lf;In case you need to use multitouch XY and Id use this example of R and TouchState (Split)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 5">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26">
+   <BOUNDS type="Box" left="7545" top="1920" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7545" top="1920" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="PositionXY" dstnodeid="26" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="18" dstpinname="TranslateXY">
+   </LINK>
+   <NODE systemname="Content-Touchbutton-TouchExplain" filename="Content-Touchbutton-TouchExplain.v4p" nodename="Content-Touchbutton-TouchExplain.v4p" componentmode="Hidden" id="46">
+   <BOUNDS type="Node" left="1665" top="3165" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1665" top="3165" width="11610" height="11830">
+   </BOUNDS>
+   <BOUNDS type="Window" left="8565" top="300" width="13185" height="16710">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="46" srcpinname="Layer Out" dstnodeid="0" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="TouchButton (IR Interface)" filename="..\Utils\TouchButton\TouchButton (IR Interface).v4p" nodename="TouchButton (IR Interface)" componentmode="Hidden" id="47">
+   <BOUNDS type="Node" left="1335" top="840" width="1455" height="270">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enable" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="IsPressed" visible="1">
+   </PIN>
+   <PIN pinname="Object Hit" visible="1">
+   </PIN>
+   <PIN pinname="OnRelease" visible="1">
+   </PIN>
+   <PIN pinname="OnPress" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1335" top="840">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 3">
+   </LINK>
+   <NODE systemname="Content-Touchbutton-SwipeExplain" filename="Content-Touchbutton-SwipeExplain.xml" nodename="Content-Touchbutton-SwipeExplain.xml" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="4590" top="3165" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="6330" top="2370" width="12045" height="16710">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="4590" top="3165">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="49" srcpinname="Layer Out" dstnodeid="0" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="SwipeButton (IR Interface)" filename="..\Utils\TouchButton\SwipeButton (IR Interface).v4p" nodename="SwipeButton (IR Interface)" componentmode="Hidden" id="50">
+   <BOUNDS type="Node" left="4710" top="840" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Window" left="14280" top="11085" width="9165" height="7230">
+   </BOUNDS>
+   <PIN pinname="Enable" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Object Hit" visible="1">
+   </PIN>
+   <PIN pinname="IsPressed" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="4710" top="840">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="51">
+   <BOUNDS type="Node" left="4395" top="1350" width="945" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4395" top="1350" width="2310" height="450">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Use Module not plugin&cr;&lf;R (TouchData) is inside |">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="52">
+   <BOUNDS type="Node" left="1245" top="1350" width="945" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1245" top="1350" width="2310" height="450">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Use Module not plugin&cr;&lf;R (TouchData) is inside |">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   </PATCH>

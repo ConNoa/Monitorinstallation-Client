@@ -1,0 +1,111 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\_IR\_Template_2016\APP\Subpatches\FG-Idle.v4p" systemname="FG-Idle" filename="D:\_IR\_Template_2016\APP\Subpatches\FG-Idle.v4p" scrollx="0" scrolly="-360">
+   <NODE id="15" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <BOUNDS type="Box" left="900" top="5625" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="900" top="5625" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="1935" top="4155" width="7455" height="7260">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="Group (DX11.Layer)" nodename="Group (DX11.Layer)" componentmode="Hidden" id="16" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll">
+   <BOUNDS type="Node" left="900" top="4830" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Layer Out" dstnodeid="15" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="FG-Idle-FingerTap" filename="FG-Idle-FingerTap.v4p" nodename="FG-Idle-FingerTap.v4p" componentmode="Hidden" id="46">
+   <BOUNDS type="Node" left="1245" top="3945" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="13275" top="2730" width="10005" height="15795">
+   </BOUNDS>
+   </NODE>
+   <NODE id="18" systemname="MapTransition (Animation)" nodename="MapTransition (Animation)" componentmode="Hidden" filename="Utils\MapTransition (Animation).v4p" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="1665" top="1725" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Distance" slicecount="1" pintype="Input" visible="1" values="-0.41">
+   </PIN>
+   <PIN pinname="Input" visible="1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="-0.5">
+   </PIN>
+   <PIN pinname="Output" visible="1" pintype="Output">
+   </PIN>
+   <BOUNDS type="Box" left="165" top="900" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="30180" top="12855" width="3780" height="4395">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Window Handle" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE id="17" systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden">
+   <BOUNDS type="Node" left="1230" top="2370" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Y" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="9" systemname="R (Value)" nodename="R (Value)" componentmode="Hidden">
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <BOUNDS type="Node" left="1650" top="975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Transition-Idle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Input Value" dstnodeid="18" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="17" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Input Value" dstnodeid="46" dstpinname="Alpha">
+   </LINK>
+   <NODE systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden" id="47">
+   <BOUNDS type="Node" left="1230" top="3180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="-0.47">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Transform Out" dstnodeid="47" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Transform Out" dstnodeid="46" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Layer Out" dstnodeid="16" dstpinname="Layer 2">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   </PATCH>
